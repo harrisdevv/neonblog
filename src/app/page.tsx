@@ -100,7 +100,7 @@ export default function Home() {
             <span className="ml-2">CV</span>
           </button>
           <p className="mt-8 max-w-md text-lg">
-            I'm a full-stack web developer and I work remotely from South of Vietnam.
+            I&apos;m a full-stack web developer and I work remotely from South of Vietnam.
           </p>
         </div>
         <div className="relative">
