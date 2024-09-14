@@ -11,17 +11,17 @@ const blogPosts: BlogPost[] = [
   {
     title: "React Suspense and React.lazy by Example",
     description: "When apps start to grow you can easily end up including too many components making it heavier and slow to load. One of the solutions to this problem is Code-Splitting and Webpack is probably ...",
-    image: "/images/blog1.jpg",
+    image: "/publiccoding.jpg",
   },
   {
     title: "10 Things to Know About ES6 before Learning React JS",
     description: "When apps start to grow you can easily end up including too many components making it heavier and slow to load. One of the solutions to this problem is Code-Splitting and Webpack is probably ...",
-    image: "/images/blog2.jpg",
+    image: "/coding2.jpg",
   },
   {
     title: "5 Command Line Tips and Tricks All Web Developers to Know",
     description: "When apps start to grow you can easily end up including too many components making it heavier and slow to load. One of the solutions to this problem is Code-Splitting and Webpack is probably ...",
-    image: "/images/blog3.jpg",
+    image: "/coding3.jpg",
   },
 ];
 

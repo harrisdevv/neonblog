@@ -19,7 +19,7 @@ const About = () => {
       <div className="flex-1 relative mt-10 md:mt-0 animate-float">
         <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden relative">
           <Image
-            src="/coding-image.jpg"
+            src="/coding2.jpg"
             alt="Coding setup"
             layout="fill"
             objectFit="cover"

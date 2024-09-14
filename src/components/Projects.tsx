@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Projects: React.FC = () => {
   const projects = [
-    { name: 'Project name', date: 'Dec 2021', image: '/project-image.jpg' },
+    { name: 'Project name', date: 'Dec 2021', image: '/app2.jpg' },
     // Add more projects as needed
   ];
 
