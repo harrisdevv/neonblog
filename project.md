@@ -3,16 +3,22 @@ a cool standout blog for developer
 
 # tech stack
 - NextJS App Router project
+- Project folder structure: document/ai/project_structure.png
 My tech stack: read package.json of this project to know about it, and more tech:  +gitflow+ | +/TypeScript+  | +tailwindcss+ & +styled-components+  & +shadcn+ &framer motion+ | +daisyUI+ | +playwright+ |  +prisma+, +drizzle+ |  NextJS+ | +supabase+ |  +postgreSQL+ | +vercel+ CI/CD | +Electron.js++/
 
+## detail
+I'm web software engineer. My stack tech is: html,css,typescript, tailwindcss,electron, react, redux, postgresql, supabase. i mainly use typescript. i love learning and building SAAS product and be nomad developer and freedom.
 My current tech stack:
 - **Frontend**: Next.js App Router, TypeScript, Tailwind CSS, DaisyUI, Framer Motion
 - **Backend**: Prisma, PostgreSQL, Supabase
 - **Authentication**: Supabase
 - **API Requests**: Axios
 - **Form Handling**: React Hook Form
+- **Testing**: Playwright
 - **CI/CD**: GitHub Actions
 - **Deployment**: Vercel
+- **Monitoring and Logging**: Sentry
+- **DevOps**: Docker
 - **Additional Tools**: ESLint, Prettier
 
 
