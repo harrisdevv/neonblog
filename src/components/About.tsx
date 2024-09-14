@@ -7,7 +7,7 @@ const About = () => {
       <div className="flex-1 animate-fadeIn">
         <h2 className="text-6xl md:text-8xl font-bold mb-8 animate-slideInLeft">About<br />me</h2>
         <p className="text-lg mb-8 animate-fadeIn" style={{animationDelay: '0.3s'}}>
-          I'm a passionate web developer with a knack for creating dynamic and responsive web applications. 
+          I&apos;m a passionate web developer with a knack for creating dynamic and responsive web applications. 
           I specialize in using modern technologies like Next.js, React, and TypeScript to build user-friendly interfaces. 
           My goal is to deliver high-quality code and seamless user experiences. 
           I enjoy tackling challenges and continuously learning to improve my skills.
