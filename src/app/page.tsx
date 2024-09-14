@@ -9,7 +9,7 @@ import { ImageIcon, LinkIcon, DownloadIcon, DiscordIcon, FacebookIcon, Instagram
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-900 to-purple-900 text-white">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-black to-purple-900 text-white">
       <header className="flex justify-between items-center w-full p-4 sticky top-0 z-50 bg-black/30 backdrop-blur-md">
         <div className="flex gap-4">
           <button className="bg-black/30 text-white px-4 py-2 rounded-full flex items-center hover:bg-purple-600 transition-all duration-300">
