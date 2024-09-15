@@ -12,9 +12,9 @@ const About = () => {
           My goal is to deliver high-quality code and seamless user experiences. 
           I enjoy tackling challenges and continuously learning to improve my skills.
         </p>
-        <button className="bg-purple-600 text-white px-8 py-4 rounded-full text-xl hover:bg-purple-700 transition-all duration-300 animate-fadeIn" style={{animationDelay: '0.6s'}}>
+        <a href="#contact" className="bg-purple-600 text-white px-8 py-4 rounded-full text-xl hover:bg-purple-700 transition-all duration-300 animate-fadeIn" style={{animationDelay: '0.6s'}}>
           Contact me
-        </button>
+        </a>
       </div>
       <div className="flex-1 relative mt-10 md:mt-0 animate-float">
         <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden relative">

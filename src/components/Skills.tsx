@@ -7,12 +7,12 @@ interface Skill {
 
 const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => (
   <div className="flex items-center mb-4 animate-fadeIn">
-    <span className="w-24 text-md">{skill.name}</span>
+    <span className="w-36 text-xl font-medium">{skill.name}</span>
     <div className="flex-1 flex">
       {[...Array(10)].map((_, i) => (
         <div
           key={i}
-          className={`w-2 h-2 rounded-full mx-1 transition-all duration-300 ${
+          className={`w-4 h-4 rounded-full mx-1 transition-all duration-300 ${
             i < skill.level ? 'bg-pink-500 scale-100' : 'bg-gray-700 scale-75'
           }`}
         />
