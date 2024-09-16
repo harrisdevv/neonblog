@@ -49,11 +49,11 @@ export default function Home() {
 
       <div className="absolute top-[190px] flex-none w-10 h-96 overflow-hidden">
         <div className="top-30 left-0 w-full h-full flex flex-col gap-11">
-          <div className="w-full h-1 bg-purple-500 transform rotate-45 origin-left"></div>
-          <div className="w-full h-1 bg-purple-500 transform rotate-45 origin-left"></div>
-          <div className="w-full h-1 bg-purple-500 transform rotate-45 origin-left"></div>
-          <div className="w-full h-1 bg-purple-500 transform rotate-45 origin-left"></div>
-          <div className="w-full h-1 bg-purple-500 transform rotate-45 origin-left"></div>
+          <div className="w-full h-1 bg-purple-700 transform rotate-45 origin-left"></div>
+          <div className="w-full h-1 bg-purple-700 transform rotate-45 origin-left"></div>
+          <div className="w-full h-1 bg-purple-700 transform rotate-45 origin-left"></div>
+          <div className="w-full h-1 bg-purple-700 transform rotate-45 origin-left"></div>
+          <div className="w-full h-1 bg-purple-700 transform rotate-45 origin-left"></div>
         </div>
       </div>
 

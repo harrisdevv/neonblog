@@ -29,8 +29,8 @@ const BlogPosts: React.FC = () => {
   return (
     <section className="py-16 bg-black text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-bold mb-8 animate-fadeIn">My blog</h2>
-        <button className="bg-purple-600 text-white px-6 py-2 rounded-full mb-8 hover:bg-purple-700 transition-all duration-300 animate-fadeIn">See all</button>
+        <h2 className="text-7xl font-bold mb-8 animate-fadeIn">My blog</h2>
+        <button className="bg-purple-600 font-bold text-white px-6 py-2 rounded-full mb-8 hover:bg-purple-700 transition-all duration-300 animate-fadeIn">See all</button>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
             <div key={index} className="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fadeIn" style={{animationDelay: `${index * 0.2}s`}}>

@@ -4,10 +4,13 @@ import React from 'react';
 
 const Contact: React.FC = () => {
   return (
-    <div className="bg-black text-white p-10 md:p-20 animate-fadeIn">
-      <div className="max-w-2xl mx-auto">
-        <h1 className="text-6xl md:text-7xl font-bold mb-8 animate-slideInLeft">Contact me</h1>
-        <form className="space-y-8">
+    <div className="bg-black text-white p-10 md:p-20 animate-fadeIn relative">
+      <div className='absolute top-1/4 right-10 bg-gradient-to-b from-purple-400 to-pink-400 w-96 h-96 blur-3xl opacity-20 rounded-full z-10 hidden xl:block'></div>
+      <div className='absolute top-1/4 left-10 bg-gradient-to-b from-purple-400 to-pink-400 w-96 h-96 blur-3xl opacity-20 rounded-full z-10 hidden xl:block'></div>
+      
+      <div className="max-w-2xl mx-auto ">
+        <h1 className="text-7xl md:text-8xl font-bold mb-8 animate-slideInLeft text-center">Contact me</h1>
+        <form className="space-y-8 mt-10 z-20">
           <div>
             <label htmlFor="fullName" className="block text-lg font-bold mb-2 ml-4">Full name *</label>
             <input
@@ -39,7 +42,7 @@ const Contact: React.FC = () => {
           </div>
           <button
             type="submit"
-            className="bg-purple-600 font-bold text-white px-8 py-3 rounded-full text-xl hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
+            className="bg-purple-900 font-bold text-white px-8 py-3 rounded-full text-xl hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
           >
             Send Message
           </button>

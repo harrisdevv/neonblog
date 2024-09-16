@@ -18,7 +18,7 @@ const About = () => {
         </a>
       </div>
       <div className="flex-1 relative mt-10 md:mt-0 animate-float">
-        <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden relative">
+        <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden relative z-20">
           <Image
             src="/coding2.jpg"
             alt="Coding setup"
@@ -26,10 +26,10 @@ const About = () => {
             objectFit="cover"
           />
         </div>
-        <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-cyan-400 to-purple-400 rounded-full opacity-50 blur-xl animate-pulse"></div>
+        <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-cyan-400 to-purple-400 rounded-full opacity-50 blur-2xl animate-pulse z-10"></div>
       </div>
-      <div className="absolute right-20 text-8xl text-purple-600 animate-bounce hidden md:block">→</div>
-      <div className="absolute right-10 w-40 h-40 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full opacity-50 blur-3xl animate-pulse"></div>
+      <div className="absolute right-80 text-8xl text-purple-600 animate-bounce hidden md:block">→</div>
+      <div className="absolute right-72 w-40 h-40 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full opacity-50 blur-3xl animate-pulse "></div>
       <DotPattern />
 
     </div>

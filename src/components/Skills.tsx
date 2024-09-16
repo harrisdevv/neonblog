@@ -1,4 +1,5 @@
 import React from 'react';
+import GradientArrow from './reversed-gradient-arrow';
 
 interface Skill {
   name: string;
@@ -40,6 +41,7 @@ const Skills: React.FC = () => {
         <h2 className="text-8xl font-bold mb-12 flex items-center animate-slideInLeft">
           My skills
           <span className="text-pink-500 ml-4 animate-bounce">←</span>
+          {/* <GradientArrow length={400}></GradientArrow> */}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
           {skills.map((skill, index) => (

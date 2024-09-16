@@ -10,18 +10,20 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white py-16">
+    <footer className="bg-black text-white py-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-start">
           <div className="flex flex-row w-full border-b border-violet-600 mb-12 pb-10">
             <div className="mb-12 animate-fadeIn flex-1">
-              <h2 className="text-6xl md:text-7xl font-bold mb-6">Follow me</h2>
+              <h2 className="text-5xl md:text-7xl xl:text-8xl font-bold mb-6 whitespace-nowrap">
+                Follow me
+              </h2>
               <div className="flex space-x-2">
-                {[...Array(15)].map((_, i) => (
+                {[...Array(22)].map((_, i) => (
                   <div
                     key={i}
-                    className="w-3 h-3 bg-purple-600 rounded-full animate-pulse"
-                    style={{ animationDelay: `${i * 0.1}s` }}
+                    className="w-1 h-1 xl:w-4 xl:h-4 bg-purple-600 rounded-full animate-pulse"
+                    style={{ animationDelay: `${i * 0.025}s` }}
                   ></div>
                 ))}
               </div>
@@ -39,7 +41,7 @@ const Footer: React.FC = () => {
                   <a
                     key={name}
                     href={`#${name}`}
-                    className="bg-purple-600 rounded-full p-6 flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-purple-600 transform hover:scale-110 hover:shadow-lg animate-fadeIn rounded-full"
+                    className="bg-purple-600 p-6 flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-purple-600 transform hover:scale-110 hover:shadow-lg animate-fadeIn rounded-full"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <Icon />
@@ -48,11 +50,10 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="flex flex-col md:flex-row justify-between w-full items-center mb-8">
             <p className="text-2xl mb-4 md:mb-0">Hien The Phan</p>
             <nav>
-              <ul className="flex flex-wrap justify-center md:space-x-6">
+              <ul className="flex flex-wrap justify-center md:space-x-6 sm:space-x-2">
                 <li>
                   <a
                     href="#home"
