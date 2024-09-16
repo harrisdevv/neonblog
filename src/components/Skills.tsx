@@ -1,5 +1,4 @@
 import React from 'react';
-import { GradientBackgroundBluePurple } from './GradientBackground';
 
 interface Skill {
   name: string;

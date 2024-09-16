@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import { GradientBackgroundBluePurple, GradientBackgroundPinkPurple } from './GradientBackground';
 import DotPattern from './DotPattern';
 
 const About = () => {
