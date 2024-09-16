@@ -1,4 +1,5 @@
 import React from 'react';
+import { GradientBackgroundBluePurple } from './GradientBackground';
 
 interface Skill {
   name: string;
@@ -13,7 +14,7 @@ const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => (
         <div
           key={i}
           className={`w-4 h-4 rounded-full mx-1 transition-all duration-300 ${
-            i < skill.level ? 'bg-pink-500 scale-100' : 'bg-gray-700 scale-75'
+            i < skill.level ? 'bg-pink-500 scale-100' : 'bg-pink-800 scale-75 opacity-40'
           }`}
         />
       ))}
@@ -34,8 +35,9 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-black to-purple-900 text-white p-20">
-      <div className="max-w-4xl mx-auto">
+    <div className="bg-black text-white p-40 relative">
+      <div className='absolute top-32 left-24 bg-gradient-to-b from-blue-400 to-pink-400 w-64 h-96 blur-3xl opacity-25 rounded-full'></div>
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-8xl font-bold mb-12 flex items-center animate-slideInLeft">
           My skills
           <span className="text-pink-500 ml-4 animate-bounce">←</span>

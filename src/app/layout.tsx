@@ -8,8 +8,11 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "The Code Chronicles",
-  description: "Insights and tutorials on web development by Hien Phan",
+  title: "HinCode | Coding is fun",
+  description: "Innovative Insights and Tutorials on Web Development by Hien Phan",
+  icons: {
+    icon: "/programmer.png", // Add this line to include the icon
+  },
 };
 
 export default function RootLayout({
@@ -27,3 +30,4 @@ export default function RootLayout({
     </html>
   );
 }
+
