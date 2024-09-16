@@ -1,5 +1,4 @@
 import React from 'react';
-import GradientArrow from './reversed-gradient-arrow';
 
 interface Skill {
   name: string;
