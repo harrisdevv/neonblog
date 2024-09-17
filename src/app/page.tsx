@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-black to-purple-900 text-white">
       <header className="flex justify-between items-center w-11/12 mx-auto p-[0.9px] rounded-full sticky top-1 z-50 bg-black/30 backdrop-blur-md bg-gradient-to-r from-blue-500 to-purple-500">
-        <span className="flex justify-between items-center w-full bg-gray-900 text-white rounded-full pr-2 pl-8 py-2">
+        <span className="flex justify-between items-center w-full bg-gray-900 text-white rounded-full pr-2 pl-4 py-2">
           <div className="flex items-center text-2xl font-bold">
             <Image src="/programmer.png" alt="Programmer Icon" width={30} height={30} className="mr-2" />
             HinCode
@@ -40,7 +40,7 @@ export default function Home() {
               <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-purple-300 dark:peer-focus:ring-purple-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-purple-600"></div>
             </label>
             <span className="text-sm font-medium">Dark</span>
-            <button className="bg-purple-900 font-bold text-white px-6 py-2 rounded-full hover:bg-purple-600 transition-all duration-300 text-lg">Contact me</button>
+            <a href="#contact" className="bg-purple-900 font-bold text-white px-6 py-2 rounded-full hover:bg-purple-600 transition-all duration-300 text-lg">Contact me</a>
           </div>
         </span>
       </header>
@@ -89,6 +89,7 @@ export default function Home() {
       <div id="blog-posts"><BlogPosts /></div>
       <div id="contact"><Contact /></div>
       <div id="footer"><Footer /></div>
+
     </div>
   );
 }

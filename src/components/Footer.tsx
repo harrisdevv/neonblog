@@ -57,23 +57,39 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#home"
-                    className="hover:text-purple-600 transition-colors duration-300"
+                    className="text-white hover:text-purple-400 transition-all duration-300"
                   >
                     Home
                   </a>
                 </li>
                 <li>
                   <a
+                    href="#about"
+                    className="text-white hover:text-purple-400 transition-all duration-300"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#skills"
+                    className="text-white hover:text-purple-400 transition-all duration-300"
+                  >
+                    Skills
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="#projects"
-                    className="hover:text-purple-600 transition-colors duration-300"
+                    className="text-white hover:text-purple-400 transition-all duration-300"
                   >
                     Projects
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#blog"
-                    className="hover:text-purple-600 transition-colors duration-300"
+                    href="#blog-posts"
+                    className="text-white hover:text-purple-400 transition-all duration-300"
                   >
                     Blog
                   </a>
@@ -81,7 +97,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#contact"
-                    className="hover:text-purple-600 transition-colors duration-300"
+                    className="text-white hover:text-purple-400 transition-all duration-300"
                   >
                     Contact
                   </a>

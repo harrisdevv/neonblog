@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
           >
             {index % 2 === 0 && (
               <>
-                <div className="flex items-center justify-center opacity-80 absolute left-20 top-1/3">
+                <div className="flex items-center justify-center opacity-80 absolute left-20 top-1/2">
                   <div className="grid grid-cols-3 gap-5">
                     {Array.from({ length: 21 }).map((_, index) => (
                       <div
@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
                     ))}
                   </div>
                 </div>
-                <div className="absolute top-1/3 left-0 bg-gradient-to-b from-purple-400 to-pink-400 w-96 h-96 blur-3xl opacity-20"></div>
+                <div className="absolute top-1/3 left-0 bg-gradient-to-b from-purple-400 to-pink-400 w-96 h-96 blur-3xl opacity-20  z-1"></div>
                 <div className="flex flex-col text-end mr-8">
                   <h2 className="text-4xl md:text-6xl font-bold  animate-slideInLeft">
                     {project.name}
@@ -56,7 +56,7 @@ const Projects: React.FC = () => {
             )}
             {index % 2 === 1 && (
               <>
-                <div className="flex items-center justify-center opacity-80 absolute right-1/3 top-1/3">
+                <div className="flex items-center justify-center opacity-80 absolute xl:right-1/3 xl:top-1/3 sm:right-20 sm:top-3/4">
                   <div className="grid grid-cols-7 gap-5">
                     {Array.from({ length: 21 }).map((_, index) => (
                       <div
@@ -66,7 +66,7 @@ const Projects: React.FC = () => {
                     ))}
                   </div>
                 </div>
-                <div className="absolute top-1/3 right-1/3 bg-gradient-to-b from-purple-400 to-pink-400 w-96 h-96 blur-3xl opacity-20"></div>
+                <div className="absolute top-1/3 right-1/3 bg-gradient-to-b from-purple-400 to-pink-400 w-96 h-96 blur-3xl opacity-20 z-1"></div>
                 <div className="relative group">
                   <Image
                     src={project.image}
@@ -88,7 +88,7 @@ const Projects: React.FC = () => {
             )}
           </div>
         ))}
-        <p className="text-center text-xl md:text-2xl text-purple-500 hover:text-purple-300 transition-colors duration-300 cursor-pointer">
+        <p className="relative z-2 text-center text-xl md:text-2xl text-purple-500 hover:text-purple-300 transition-colors duration-300 cursor-pointer">
           See more projects &gt;&gt;
         </p>
       </div>
