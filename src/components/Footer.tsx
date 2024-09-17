@@ -10,7 +10,7 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white py-20">
+    <footer className="bg-black text-white py-20 relative">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-start">
           <div className="flex flex-row w-full border-b border-violet-600 mb-12 pb-10">
@@ -125,6 +125,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
+      <div className="absolute top-1/3 -left-10 bg-purple-700 w-96 h-96 blur-3xl opacity-20 rounded-full">erer</div>
       </div>
     </footer>
   );
