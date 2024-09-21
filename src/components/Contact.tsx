@@ -67,12 +67,12 @@ const Contact: React.FC = () => {
       </div>
 
 
-      <div className="absolute top-10 right-10 bg-purple-700 w-96 h-96 blur-3xl opacity-20 rounded-full z-10 hidden xl:block"></div>
-      <div className="absolute top-10 left-10 bg-purple-700 w-96 h-96 blur-3xl opacity-20 rounded-full z-10 hidden xl:block"></div>
-      <div className="absolute -top-0 left-80 hidden xl:block lg:hidden md:hidden sm:hidden z-10">
+      <div className="absolute top-10 right-10 bg-purple-700 w-96 h-96 blur-3xl opacity-15 rounded-full z-10 hidden md:block"></div>
+      <div className="absolute top-10 left-10 bg-purple-700 w-96 h-96 blur-3xl opacity-15 rounded-full z-10 hidden md:block"></div>
+      <div className="absolute -top-0 left-60 hidden 2xl:block xl:hidden lg:hidden md:hidden sm:hidden z-10">
         <ArcComponent width={400} height={400} />
       </div>
-      <div className="absolute -top-20 left-100 xl:block lg:hidden md:hidden sm:hidden z-10 ">
+      <div className="absolute -top-20 left-0 xl:block lg:hidden md:hidden sm:hidden z-10 ">
         <ArcComponent width={800} height={800} />
       </div>
       <div className="flex items-center justify-center opacity-80 absolute right-40 top-60 hidden xl:block lg:hidden md:hidden sm:hidden">

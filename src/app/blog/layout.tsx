@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Book } from "lucide-react"; // Import the desired icon from lucide-react
 import {
   DiscordIcon,
@@ -54,8 +54,10 @@ export default function Layout({
       <div className="absolute top-0 right-0 bg-blue-400 w-96 rounded-full h-96 blur-3xl opacity-15 z-10"></div>
       <div className="absolute top-1/4 right-0 bg-pink-400 w-96 rounded-full h-96 blur-3xl opacity-15 z-10"></div>
       <div className="flex-1 relative z-20">
-        <div className="flex items-center justify-center mb-4">
+        <a href="/blog" className="flex items-center justify-center mb-4">
           <Image
+            width={128}
+            height={128}
             src="/programmer.png"
             alt="Programmer"
             className="w-16 h-16 rounded-full mr-3"
@@ -66,14 +68,14 @@ export default function Layout({
             <Code className="ml-2" />
             <Book className="ml-2" />
           </h1>
-        </div>
+        </a>
         <p className="text-lg mb-10 text-center font-semibold text-gray-300 border-b-2 border-b-transparent pb-10 relative">
           My thoughts on technology and business, welcome to subscribe
           <CornerRightDown className="w-10 h-10 inline ml-2 transition-transform transform hover:scale-110 hover:animate-bounce text-purple-500" />
           <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500"></span>
         </p>
         <div className="flex gap-4 mb-10">
-          <label className="text-gray-300">I write 1 blog post/week </label>
+          <label className="text-gray-300">I write 1 blog post per week (total 500+ post)</label>
           <ArrowRight className="mr-4 w-8 h-8 inline" />
           <input
             type="email"
@@ -104,7 +106,10 @@ export default function Layout({
         <ul className="space-y-2">
           {blogPosts.map((post) => (
             <li key={post.id}>
-              <a href={`/blog/${post.id}`} className="text-purple-500 hover:text-purple-400">
+              <a
+                href={`/blog/${post.id}`}
+                className="text-purple-500 hover:text-purple-400"
+              >
                 {post.title}
               </a>
               <span className="text-gray-500 block">{post.date}</span>

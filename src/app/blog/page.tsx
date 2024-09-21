@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  ArrowLeft,
-  ArrowRight,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 const blogPosts = [
@@ -68,7 +65,9 @@ const BlogPage: React.FC = () => {
             className="bg-gray-800 p-6 rounded-lg shadow-lg flex"
           >
             <Image
-              src={post.image}
+              width={200}
+              height={200}
+              src={`/${post.image}`}
               alt={post.title}
               className="w-1/3 h-full object-cover rounded-lg mr-6"
             />
