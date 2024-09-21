@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                   <div
                     key={i}
                     className="w-1 h-1 xl:w-4 xl:h-4 bg-purple-600 rounded-full animate-pulse"
-                    style={{ animationDelay: `${i * 0.025}s` }}
+                    style={{ animationDelay: `${i * 0.1}s` }}
                   ></div>
                 ))}
               </div>

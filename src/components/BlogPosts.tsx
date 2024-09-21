@@ -33,9 +33,11 @@ const BlogPosts: React.FC = () => {
     <section className="py-16 bg-black text-white relative z-3">
       <div className="container mx-auto px-4 relative z-3">
         <h2 className="text-7xl font-bold mb-8 animate-fadeIn">My blog</h2>
+        <a href="/blog">
         <button className="bg-purple-600 font-bold text-white px-6 py-2 rounded-full mb-8 hover:bg-purple-700 transition-all duration-300 animate-fadeIn relative z-10">
           See all
         </button>
+        </a>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {blogPosts.map((post, index) => (
             <div

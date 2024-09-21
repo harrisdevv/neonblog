@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "What does it take to become a web developer?",
+    "description": "Web development, also known as website development, encompasses a variety of tasks and processes involved in creating websites for the internet...",
+    "date": "2023-10-10",
+    "readTime": "1 Min",
+    "tag": "Web Development",
+    "image": "project1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Understanding React Hooks",
+    "description": "React Hooks are functions that let you use state and other React features without writing a class...",
+    "date": "2023-10-12",
+    "readTime": "2 Min",
+    "tag": "React",
+    "image": "project2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "A Guide to CSS Grid",
+    "description": "CSS Grid Layout is a two-dimensional layout system for the web that allows you to design web pages using a grid-based approach...",
+    "date": "2023-10-15",
+    "readTime": "3 Min",
+    "tag": "CSS",
+    "image": "project3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Exploring TypeScript",
+    "description": "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript, providing better tooling at any scale...",
+    "date": "2023-10-18",
+    "readTime": "2 Min",
+    "tag": "TypeScript",
+    "image": "project4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "The Future of Web Development",
+    "description": "The future of web development is bright, with new technologies and frameworks emerging every day to enhance user experience...",
+    "date": "2023-10-20",
+    "readTime": "4 Min",
+    "tag": "Future Trends",
+    "image": "coding2.jpg"
+  }
+]

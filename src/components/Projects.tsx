@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
   return (
     <div className="bg-black text-white p-10 md:p-20">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-8xl font-bold mb-20 flex items-center animate-slideInLeft justify-end">
+        <h2 className="text-7xl font-bold mb-20 flex items-center animate-slideInLeft justify-end md:text-8xl">
           <span className="text-pink-500 ml-4 animate-bounce">←</span>
           My projects
         </h2>

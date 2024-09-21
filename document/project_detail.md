@@ -3,9 +3,19 @@ a cool standout blog for developer
 
 # tech stack
 - NextJS App Router project
-My tech stack: read package.json of this project to know about it, and more tech:  +gitflow+ | +/TypeScript+  | +tailwindcss+ & +styled-components+  & +shadcn+ &framer motion+ | +daisyUI+ | +playwright+ |  +prisma+, +drizzle+ |  NextJS+ | +supabase+ |  +postgreSQL+ | +vercel+ CI/CD | +Electron.js++/
-
-My current tech stack:
+## My tech stack
+- TypeScript 
+- tailwindcss
+- styled-components
+- shadcn
+- framer-motion
+- daisyUI
+- prisma
+- NextJS
+- supabase
+- postgreSQL
+- vercel + CI/CD
+- zod validator
 - **Frontend**: Next.js App Router, TypeScript, Tailwind CSS, DaisyUI, Framer Motion
 - **Backend**: Prisma, PostgreSQL, Supabase
 - **Authentication**: Supabase
@@ -15,11 +25,11 @@ My current tech stack:
 - **Deployment**: Vercel
 - **Additional Tools**: ESLint, Prettier
 
-
 # Code convention
 + Use worldwide popular code convention for this project
 + Write clean code, easy to maintain, write code that self-explain
 - Utilize package as much as possible, don't reinvent the wheel
+- Write code in functional way
 
 # Document
 - Read doc/* folder to get all UI design, system design, architecture, diagram if exist, figma design
@@ -34,3 +44,7 @@ My current tech stack:
 # Testing
 - Write simple test to test the whole app (integration test)
 - Only write unit test for complicated function
+
+# image
+- use placeholder image in page with url: https://dummyimage.com/600x400/000/fff&text=a, please see this url rule to change the size of this image if it needed
+

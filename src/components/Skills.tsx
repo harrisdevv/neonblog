@@ -34,13 +34,12 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <div className="bg-black text-white p-40 relative">
+    <div className="bg-black text-white p-20 relative">
       <div className='absolute top-32 left-24 bg-gradient-to-b from-blue-400 to-pink-400 w-64 h-96 blur-3xl opacity-25 rounded-full'></div>
       <div className="max-w-7xl mx-auto">
         <h2 className="text-8xl font-bold mb-12 flex items-center animate-slideInLeft">
           My skills
           <span className="text-pink-500 ml-4 animate-bounce">←</span>
-          {/* <GradientArrow length={400}></GradientArrow> */}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
           {skills.map((skill, index) => (

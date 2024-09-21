@@ -9,9 +9,10 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   title: "HinCode | Coding is fun",
-  description: "Innovative Insights and Tutorials on Web Development by Hien Phan",
+  description:
+    "Innovative Insights and Tutorials on Web Development by Hien Phan",
   icons: {
-    icon: "/programmer.png", // Add this line to include the icon
+    icon: "/programmer.png",
   },
 };
 
@@ -22,12 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${firaCode.className} antialiased fade-in`}
-      >
+      <body className={`${firaCode.className} antialiased fade-in bg-black`}>
         {children}
       </body>
     </html>
   );
 }
-

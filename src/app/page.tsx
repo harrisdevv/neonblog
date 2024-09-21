@@ -25,7 +25,7 @@ export default function Home() {
             <Image src="/programmer.png" alt="Programmer Icon" width={30} height={30} className="mr-2" />
             HinCode
           </div>
-          <nav className="flex gap-6">
+          <nav className="hidden md:flex gap-6">
             <a href="#home" className="text-white hover:text-purple-400 transition-all duration-300">Home</a>
             <a href="#about" className="text-white hover:text-purple-400 transition-all duration-300">About</a>
             <a href="#skills" className="text-white hover:text-purple-400 transition-all duration-300">Skills</a>
@@ -40,8 +40,13 @@ export default function Home() {
               <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-purple-300 dark:peer-focus:ring-purple-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-purple-600"></div>
             </label>
             <span className="text-sm font-medium">Dark</span>
-            <a href="#contact" className="bg-purple-900 font-bold text-white px-6 py-2 rounded-full hover:bg-purple-600 transition-all duration-300 text-lg">Contact me</a>
+            <a href="#contact" className="bg-purple-900 font-bold text-white px-2 md:px-6 py-2 rounded-full hover:bg-purple-600 transition-all duration-300 md:text-lg text-sm ">Contact me</a>
           </div>
+          <button className="md:hidden" aria-label="Toggle Navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </span>
       </header>
 
@@ -59,13 +64,13 @@ export default function Home() {
 
       <main id="home" className="flex justify-between items-center px-20 py-16 gap-12">
         <div className="flex flex-grow flex-col items-start">
-          <h1 className="text-4xl mb-4 animate-fadein text-gray-400 uppercase">FULL-STACK WEB DEVELOPER</h1>
-          <h2 className="text-8xl font-bold mb-8 animate-slideInLeft">Hien<br />The Phan</h2>
-          <button className="bg-purple-600 text-white px-8 py-4 rounded-full text-xl flex items-center hover:bg-purple-700 transition-all duration-300">
+          <h1 className="text-2xl md:text-4xl mb-4 animate-fadein text-gray-400 uppercase">FULL-STACK WEB DEVELOPER</h1>
+          <h2 className="text-5xl md:text-8xl font-bold mb-8 animate-slideInLeft">Hien<br />The Phan</h2>
+          <button className="bg-purple-600 text-white px-8 py-4 rounded-full text-md md:text-xl flex items-center hover:bg-purple-700 transition-all duration-300">
             <DownloadIcon />
             <span className="ml-2">CV</span>
           </button>
-          <p className="mt-8 max-w-md text-lg animate-fadeIn text-gray-400 border-l-2 border-gray-400 pl-4">
+          <p className="mt-8 max-w-md text-md md:text-lg animate-fadeIn text-gray-400 border-l-2 border-gray-400 pl-4">
             I&apos;m a full-stack web developer and I work remotely from South of Vietnam.
           </p>
         </div>
