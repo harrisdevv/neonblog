@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "title": "What is TypeScript?",
+    "description": "TypeScript is a superset of JavaScript that adds static types, helping catch errors during development.",
+    "date": "2023-10-01",
+    "readTime": "2 Min",
+    "tag": "TypeScript",
+    "image": "app2.jpg",
+    "file": "1-what-is-typescript.md"
+  },
+  {
+    "id": 2,
+    "title": "Why Use HTML and CSS?",
+    "description": "HTML and CSS are essential for building beautiful and functional websites.",
+    "date": "2023-10-02",
+    "readTime": "3 Min",
+    "tag": "Web Development",
+    "image": "project3.jpg",
+    "file": "2-why-use-html-and-css.md"
+  },
+  {
+    "id": 3,
+    "title": "Getting Started with Tailwind CSS",
+    "description": "Tailwind CSS is a utility-first CSS framework that allows for rapid UI development.",
+    "date": "2023-10-03",
+    "readTime": "4 Min",
+    "tag": "CSS",
+    "image": "app.jpg",
+    "file": "3-getting-started-with-tailwindcss.md"
+  },
+  {
+    "id": 4,
+    "title": "A Guide to CSS Grid",
+    "description": "CSS Grid Layout is a powerful layout system for creating responsive web designs.",
+    "date": "2023-10-04",
+    "readTime": "3 Min",
+    "tag": "CSS",
+    "image": "project1.jpg",
+    "file": "4-exploring-daisyui.md"
+  },
+  {
+    "id": 5,
+    "title": "Understanding React Hooks",
+    "description": "React Hooks allow you to use state and other React features without writing a class.",
+    "date": "2023-10-05",
+    "readTime": "2 Min",
+    "tag": "React",
+    "image": "app3.jpg",
+    "file": "5-why-nextjs-is-awesome.md"
+  },
+  {
+    "id": 6,
+    "title": "Using Convex Database",
+    "description": "Convex is a serverless database that simplifies data management for modern web applications.",
+    "date": "2023-10-06",
+    "readTime": "3 Min",
+    "tag": "Database",
+    "image": "project2.jpg",
+    "file": "6-using-convex-database.md"
+  },
+  {
+    "id": 7,
+    "title": "Clerk Authentication Made Easy",
+    "description": "Clerk simplifies user authentication, allowing for quick integration of sign-up and sign-in features.",
+    "date": "2023-10-07",
+    "readTime": "2 Min",
+    "tag": "Authentication",
+    "image": "app.jpg",
+    "file": "7-clerk-authentication.md"
+  },
+  {
+    "id": 8,
+    "title": "Lemon Squeezy: Simplifying Payments",
+    "description": "Lemon Squeezy is a payment platform designed for digital products, making it easy to manage online sales.",
+    "date": "2023-10-08",
+    "readTime": "2 Min",
+    "tag": "Payments",
+    "image": "app2.jpg",
+    "file": "8-lemon-squeezy-payment.md"
+  },
+  {
+    "id": 9,
+    "title": "Framer Motion: Bringing Your UI to Life",
+    "description": "Framer Motion is a powerful library for creating stunning animations in React applications.",
+    "date": "2023-10-09",
+    "readTime": "3 Min",
+    "tag": "Animations",
+    "image": "project4.jpg",
+    "file": "9-framer-motion-for-animations.md"
+  },
+  {
+    "id": 10,
+    "title": "Using Zod for Validation",
+    "description": "Zod is a TypeScript-first schema declaration and validation library that simplifies data validation processes.",
+    "date": "2023-10-10",
+    "readTime": "2 Min",
+    "tag": "Validation",
+    "image": "app3.jpg",
+    "file": "10-using-zod-for-validation.md"
+  },
+  {
+    "id": 11,
+    "title": "My Tech Stack and Indie Dev Lifestyle: A Hilarious Journey",
+    "description": "Join me on a humorous journey through my life as an indie developer, sharing my tech stack and daily struggles.",
+    "date": "2023-10-11",
+    "readTime": "5 Min",
+    "tag": "Indie Dev",
+    "image": "project3.jpg",
+    "file": "my-tech-stack-and-indie-dev-lifestyle.md"
+  },
+  {
+    "id": 12,
+    "title": "My Indie Dev Adventures: A Comedic Journey Through Code and Coffee",
+    "description": "Join me on a comedic journey through my life as an indie developer, filled with tech stack insights and daily struggles.",
+    "date": "2023-10-12",
+    "readTime": "6 Min",
+    "tag": "Indie Dev",
+    "image": "project1.jpg",
+    "file": "my-indie-dev-adventures.md"
+  },
+  {
+    "id": 13,
+    "title": "My Indie Dev Life: Code, Coffee, and Chaos",
+    "description": "Explore the humorous and chaotic life of an indie developer, from tech stack to daily routines.",
+    "date": "2023-10-13",
+    "readTime": "7 Min",
+    "tag": "Indie Dev",
+    "image": "project3.jpg",
+    "file": "my-indie-dev-life.md"
+  },
+  {
+    "id": 14,
+    "title": "My Journey with React: From Zero to Hero",
+    "description": "A fun and professional exploration of my experiences with React, including challenges, community support, and future aspirations.",
+    "date": "2023-10-14",
+    "readTime": "5 Min",
+    "tag": "React",
+    "image": "project2.jpg",
+    "file": "my-journey-with-react.md"
+  },
+  {
+    "id": 15,
+    "title": "The Art of Balancing Work and Play as an Indie Developer",
+    "description": "Explore the essential skills for indie developers to balance work and play, ensuring a fulfilling and sustainable lifestyle.",
+    "date": "2023-10-15",
+    "readTime": "6 Min",
+    "tag": "Indie Dev",
+    "image": "project1.jpg",
+    "file": "the-art-of-balancing-work-and-play-as-an-indie-developer.md"
+  },
+  {
+    "id": 16,
+    "title": "Exploring the World of Web Development: Trends and Best Practices",
+    "description": "Stay updated on the latest trends and best practices in web development to create engaging and effective websites.",
+    "date": "2023-10-16",
+    "readTime": "7 Min",
+    "tag": "Web Development",
+    "image": "app.jpg",
+    "file": "exploring-the-world-of-web-development-trends-and-best-practices.md"
+  },
+  {
+    "id": 17,
+    "title": "The Future of Web Development: Embracing AI and Automation",
+    "description": "Explore how AI and automation are transforming web development, enhancing workflows, and improving user experiences.",
+    "date": "2023-10-17",
+    "readTime": "8 Min",
+    "tag": "Web Development",
+    "image": "app2.jpg",
+    "file": "the-future-of-web-development-embracing-ai-and-automation.md"
+  },
+  {
+    "id": 18,
+    "title": "The Evolution of Web Design: From Static Pages to Dynamic Experiences",
+    "description": "Explore the journey of web design, highlighting key milestones, trends, and the impact of technology on user experience.",
+    "date": "2023-10-18",
+    "readTime": "10 Min",
+    "tag": "Web Design",
+    "image": "project1.jpg",
+    "file": "the-evolution-of-web-design.md"
+  },
+  {
+    "id": 19,
+    "title": "Exploring the World of Web Development: Trends and Best Practices",
+    "description": "Stay updated with the latest trends and best practices in web development to create engaging and effective websites.",
+    "date": "2023-10-19",
+    "readTime": "7 Min",
+    "tag": "Web Development",
+    "image": "project2.jpg",
+    "file": "exploring-the-world-of-web-development-trends-and-best-practices.md"
+  },
+  {
+    "id": 20,
+    "title": "Understanding CSS Flexbox: A Comprehensive Guide to Layouts",
+    "description": "A detailed exploration of CSS Flexbox, its properties, and practical examples for creating responsive layouts.",
+    "date": "2023-10-20",
+    "readTime": "8 Min",
+    "tag": "CSS",
+    "image": "project3.jpg",
+    "file": "understanding-css-flexbox.md"
+  },
+  {
+    "id": 21,
+    "title": "The Power of Progressive Web Apps: Transforming User Experiences",
+    "description": "Explore how Progressive Web Apps are revolutionizing user experiences with offline capabilities, fast loading times, and app-like features.",
+    "date": "2023-10-21",
+    "readTime": "9 Min",
+    "tag": "Web Development",
+    "image": "project1.jpg",
+    "file": "the-power-of-progressive-web-apps.md"
+  },
+  {
+    "id": 22,
+    "title": "The Future of E-Commerce: Trends and Innovations to Watch",
+    "description": "Explore the latest trends and innovations in e-commerce, from personalization to social commerce, and how they are shaping the future of online shopping.",
+    "date": "2023-10-22",
+    "readTime": "10 Min",
+    "tag": "E-Commerce",
+    "image": "app.jpg",
+    "file": "the-future-of-e-commerce.md"
+  },
+  {
+    "id": 23,
+    "title": "The Rise of Sustainable Fashion: Trends and Innovations",
+    "description": "Explore the latest trends and innovations in sustainable fashion, highlighting how the industry is evolving to create a more responsible future.",
+    "date": "2023-10-23",
+    "readTime": "12 Min",
+    "tag": "Fashion",
+    "image": "project2.jpg",
+    "file": "the-rise-of-sustainable-fashion.md"
+  },
+  {
+    "id": 24,
+    "title": "The Future of Web Development: Embracing No-Code and Low-Code Platforms",
+    "description": "Explore how no-code and low-code platforms are transforming web development, making it more accessible and efficient for everyone.",
+    "date": "2023-10-24",
+    "readTime": "15 Min",
+    "tag": "Web Development",
+    "image": "project3.jpg",
+    "file": "the-future-of-web-development-embracing-no-code-and-low-code-platforms.md"
+  },
+  {
+    "id": 25,
+    "title": "The Impact of Artificial Intelligence on Modern Web Development",
+    "description": "Explore how AI is transforming web development, enhancing user experiences, and automating tasks.",
+    "date": "2023-10-25",
+    "readTime": "12 Min",
+    "tag": "Web Development",
+    "image": "project1.jpg",
+    "file": "the-impact-of-artificial-intelligence-on-modern-web-development.md"
+  },
+  {
+    "id": 26,
+    "title": "The Impact of Blockchain Technology on Web Development",
+    "description": "Explore how blockchain technology is influencing web development, enhancing security, and enabling decentralized applications.",
+    "date": "2023-10-26",
+    "readTime": "10 Min",
+    "tag": "Web Development",
+    "image": "project2.jpg",
+    "file": "the-impact-of-blockchain-technology-on-web-development.md"
+  },
+  {
+    "id": 27,
+    "title": "The Future of Database Management with Convex",
+    "description": "Explore how Convex Database is revolutionizing data management for modern web applications.",
+    "date": "2023-10-27",
+    "readTime": "12 Min",
+    "tag": "Database",
+    "image": "app2.jpg",
+    "file": "the-future-of-database-management-with-convex.md"
+  },
+  {
+    "id": 28,
+    "title": "10 Tips to Become a Better Fullstack Developer",
+    "description": "Explore essential tips and strategies to enhance your skills as a fullstack developer and build amazing applications.",
+    "date": "2023-10-28",
+    "readTime": "10 Min",
+    "tag": "Fullstack Development",
+    "image": "app.jpg",
+    "file": "10-tips-to-become-a-better-fullstack-developer.md"
+  },
+  {
+    "id": 29,
+    "title": "The Hilarious World of Developer Memes: Laughing Through the Code",
+    "description": "Explore the funny side of coding through relatable developer memes that bring laughter and community to the tech world.",
+    "date": "2023-10-29",
+    "readTime": "12 Min",
+    "tag": "Memes",
+    "image": "project1.jpg",
+    "file": "the-hilarious-world-of-developer-memes-laughing-through-the-code.md"
+  },
+  {
+    "id": 30,
+    "title": "Solving Hard Problems: A Path to Happiness and Stress Relief",
+    "description": "Explore how tackling difficult problems can lead to happiness and stress relief, enhancing your skills and boosting your confidence.",
+    "date": "2023-10-30",
+    "readTime": "12 Min",
+    "tag": "Problem Solving",
+    "image": "app2.jpg",
+    "file": "solving-hard-problems-to-reduce-stress.md"
+  },
+  {
+    "id": 31,
+    "title": "The 2-Minute Rule: Stop Overthinking and Start Doing!",
+    "description": "Discover how the 2-Minute Rule can help you overcome procrastination and take immediate action on small tasks.",
+    "date": "2023-10-31",
+    "readTime": "10 Min",
+    "tag": "Productivity",
+    "image": "project2.jpg",
+    "file": "the-2-minute-rule-stop-overthinking-and-start-doing.md"
+  },
+  {
+    "id": 32,
+    "title": "Surround Yourself with the Right People: The Power of Influence",
+    "description": "Explore the significance of surrounding yourself with positive influences and how it can lead to personal growth and success.",
+    "date": "2023-11-01",
+    "readTime": "12 Min",
+    "tag": "Personal Development",
+    "image": "app3.jpg",
+    "file": "surround-yourself-with-the-right-people-the-power-of-influence.md"
+  }
+]

@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#home"
-                    className="text-white hover:text-purple-400 transition-all duration-300"
+                    className="text-primary transition-all duration-300"
                   >
                     Home
                   </a>
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#about"
-                    className="text-white hover:text-purple-400 transition-all duration-300"
+                    className="text-primary transition-all duration-300"
                   >
                     About
                   </a>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#skills"
-                    className="text-white hover:text-purple-400 transition-all duration-300"
+                    className="text-primary transition-all duration-300"
                   >
                     Skills
                   </a>
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#projects"
-                    className="text-white hover:text-purple-400 transition-all duration-300"
+                    className="text-primary transition-all duration-300"
                   >
                     Projects
                   </a>
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#blog-posts"
-                    className="text-white hover:text-purple-400 transition-all duration-300"
+                    className="text-primary transition-all duration-300"
                   >
                     Blog
                   </a>
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#contact"
-                    className="text-white hover:text-purple-400 transition-all duration-300"
+                    className="text-primary transition-all duration-300"
                   >
                     Contact
                   </a>
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-      <div className="absolute top-1/3 -left-10 bg-purple-700 w-96 h-96 blur-3xl opacity-20 rounded-full"></div>
+      <div className="absolute top-1/3 -left-10  w-96 h-96 blur-3xl opacity-20 rounded-full"></div>
       </div>
     </footer>
   );

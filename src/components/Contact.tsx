@@ -5,7 +5,7 @@ import ArcComponent from './ArcComponent';
 
 const Contact: React.FC = () => {
   return (
-    <div className="bg-black text-white p-10 md:p-20 animate-fadeIn relative">
+    <div className="bg-black text-white p-10 md:px-20 py-36 animate-fadeIn relative">
       <div className="max-w-2xl mx-auto ">
         <h1 className="text-7xl md:text-8xl font-bold mb-8 animate-slideInLeft text-center">
           Contact me
@@ -67,8 +67,8 @@ const Contact: React.FC = () => {
       </div>
 
 
-      <div className="absolute top-10 right-10 bg-purple-700 w-96 h-96 blur-3xl opacity-15 rounded-full z-10 hidden md:block"></div>
-      <div className="absolute top-10 left-10 bg-purple-700 w-96 h-96 blur-3xl opacity-15 rounded-full z-10 hidden md:block"></div>
+      <div className="absolute top-10 right-10  w-96 h-96 blur-3xl opacity-15 rounded-full z-10 hidden md:block"></div>
+      <div className="absolute top-10 left-10  w-96 h-96 blur-3xl opacity-15 rounded-full z-10 hidden md:block"></div>
       <div className="absolute -top-0 left-60 hidden 2xl:block xl:hidden lg:hidden md:hidden sm:hidden z-10">
         <ArcComponent width={400} height={400} />
       </div>

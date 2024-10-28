@@ -13,7 +13,7 @@ const About = () => {
           My goal is to deliver high-quality code and seamless user experiences. 
           I enjoy tackling challenges and continuously learning to improve my skills.
         </p>
-        <a href="#contact" className="bg-purple-600 text-white font-bold px-8 py-4 rounded-full text-xl hover:bg-purple-700 transition-all duration-300 animate-fadeIn" style={{animationDelay: '0.6s'}}>
+        <a href="#contact" className="bg-purple-600 text-white font-bold px-8 py-4 rounded-full text-xl hover: transition-all duration-300 animate-fadeIn" style={{animationDelay: '0.6s'}}>
           Contact me
         </a>
       </div>

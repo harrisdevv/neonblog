@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Fira_Code } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const firaCode = Fira_Code({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${firaCode.className} antialiased fade-in bg-black`}>
+      <body className={`${inter.className} antialiased fade-in bg-black`}>
         {children}
       </body>
     </html>

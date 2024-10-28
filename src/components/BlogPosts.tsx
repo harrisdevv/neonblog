@@ -1,52 +1,34 @@
 import Image from "next/image";
 import React from "react";
+import blogPosts from "../app/blog/[id]/blogPosts.json";
 
 interface BlogPost {
+  id: number;
   title: string;
   description: string;
   image: string;
+  file: string;
 }
-
-const blogPosts: BlogPost[] = [
-  {
-    title: "React Suspense and React.lazy by Example",
-    description:
-      "When apps start to grow you can easily end up including too many components making it heavier and slow to load. One of the solutions to this problem is Code-Splitting and Webpack is probably ...",
-    image: "/publiccoding.jpg",
-  },
-  {
-    title: "10 Things to Know About ES6 before Learning React JS",
-    description:
-      "When apps start to grow you can easily end up including too many components making it heavier and slow to load. One of the solutions to this problem is Code-Splitting and Webpack is probably ...",
-    image: "/coding2.jpg",
-  },
-  {
-    title: "5 Command Line Tips and Tricks All Web Developers to Know",
-    description:
-      "When apps start to grow you can easily end up including too many components making it heavier and slow to load. One of the solutions to this problem is Code-Splitting and Webpack is probably ...",
-    image: "/coding3.jpg",
-  },
-];
 
 const BlogPosts: React.FC = () => {
   return (
-    <section className="py-16 bg-black text-white relative z-3">
+    <section className="py-36 bg-black text-white relative z-3">
       <div className="container mx-auto px-4 relative z-3">
         <h2 className="text-7xl font-bold mb-8 animate-fadeIn">My blog</h2>
         <a href="/blog">
-          <button className="bg-purple-600 font-bold text-white px-6 py-2 rounded-full mb-8 hover:bg-purple-700 transition-all duration-300 animate-fadeIn relative z-10">
+          <button className="bg-purple-600 font-bold text-white px-6 py-2 rounded-full mb-8 hover: transition-all duration-300 animate-fadeIn relative z-10">
             See all
           </button>
         </a>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-          {blogPosts.map((post, index) => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 ">
+          {blogPosts.map((post: BlogPost, index: number) => (
             <div
               key={index}
-              className=" relative z-10 border-gray-900 bg-transparent rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fadeIn"
+              className=" relative z-10 border-gray-900 bg-transparent rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fadeIn"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <Image
-                src={`${post.image}`}
+                src={`/${post.image}`}
                 alt={post.title}
                 width={400}
                 height={200}
@@ -56,8 +38,8 @@ const BlogPosts: React.FC = () => {
                 <h3 className="text-2xl font mb-4">{post.title}</h3>
                 <p className="text-gray-400 mb-4">{post.description}</p>
                 <a
-                  href="#"
-                  className="text-purple-500 hover:text-purple-400 transition-colors duration-300 text-xl"
+                  href={`blog/${post.id}`}
+                  className="text-purple-500  transition-colors duration-300 text-xl"
                 >
                   Read more &gt;&gt;
                 </a>
