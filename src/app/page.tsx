@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import About from "../components/About";
 import Skills from "../components/Skills";
@@ -7,7 +7,6 @@ import BlogPosts from "../components/BlogPosts";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import {
-  DownloadIcon,
   DiscordIcon,
   FacebookIcon,
   InstagramIcon,
@@ -16,6 +15,7 @@ import {
   SendIcon,
 } from "./ImageIcon";
 import { useRouter } from "next/navigation";
+import { Github } from "lucide-react";
 
 const socialLinks = [
   { href: "#discord", icon: <DiscordIcon /> },
@@ -93,7 +93,7 @@ export default function Home() {
               <span className="text-sm font-medium">Dark</span>
               <a
                 href="#contact"
-                className="btn btn-primary font-bold text-white px-2 md:px-6 py-2 rounded-full  transition-all duration-300 md:text-lg text-sm "
+                className="btn btn-primary font-bold text-white   rounded-full  transition-all duration-300 md:text-lg text-sm "
               >
                 Contact me
               </a>
@@ -139,10 +139,10 @@ export default function Home() {
             </h2>
             <button
               onClick={() => router.push("https://github.com/harrisdevv")}
-              className="bg-purple-600 text-white px-8 py-4 rounded-full text-md md:text-xl flex items-center hover: transition-all duration-300"
+              className="btn btn-primary  text-white rounded-full text-md md:text-xl flex items-center transition-all duration-300"
             >
-              <DownloadIcon />
-              <span className="ml-2">Github</span>
+              <Github />
+              <span className="">Github</span>
             </button>
             <p className="mt-8 max-w-md text-md md:text-lg animate-fadeIn text-gray-400 border-l-2 border-gray-400 pl-4">
               I&apos;m a full-stack web developer and I work remotely from South
@@ -166,7 +166,7 @@ export default function Home() {
             <a
               key={index}
               href={link.href}
-              className="text-primary transition-all duration-300 transform hover:scale-110 bg-black p-3 rounded-full"
+              className="btn btn-primary btn-ghost transition-all duration-300 transform hover:scale-110 bg-black p-3 rounded-full"
             >
               {link.icon}
             </a>

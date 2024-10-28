@@ -5,7 +5,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react"; // Import the desired arro
 import blogPosts from "../[id]/blogPosts.json"; // Import blog posts directly
 import fs from "fs";
 import path from "path";
-import ReactMarkdown from "react-markdown"; // Import react-markdown
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 
 const BlogPost = async ({ params }: { params: { id: string } }) => {

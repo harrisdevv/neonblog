@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#home"
-                    className="text-primary transition-all duration-300"
+                    className=" transition-all duration-300"
                   >
                     Home
                   </a>
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#about"
-                    className="text-primary transition-all duration-300"
+                    className=" transition-all duration-300"
                   >
                     About
                   </a>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#skills"
-                    className="text-primary transition-all duration-300"
+                    className=" transition-all duration-300"
                   >
                     Skills
                   </a>
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#projects"
-                    className="text-primary transition-all duration-300"
+                    className=" transition-all duration-300"
                   >
                     Projects
                   </a>
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#blog-posts"
-                    className="text-primary transition-all duration-300"
+                    className=" transition-all duration-300"
                   >
                     Blog
                   </a>
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="#contact"
-                    className="text-primary transition-all duration-300"
+                    className=" transition-all duration-300"
                   >
                     Contact
                   </a>

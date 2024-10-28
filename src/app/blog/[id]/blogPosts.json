@@ -318,5 +318,25 @@
     "tag": "Personal Development",
     "image": "app3.jpg",
     "file": "surround-yourself-with-the-right-people-the-power-of-influence.md"
+  },
+  {
+    "id": 33,
+    "title": "The Hilarious Misadventures of a Developer: Debugging Gone Wrong",
+    "description": "Join me as I share a funny story from my life as a developer, filled with mishaps and lessons learned.",
+    "date": "2023-11-02",
+    "readTime": "6 Min",
+    "tag": "Developer Life",
+    "image": "publiccoding.jpg",
+    "file": "funny-dev-life.md"
+  },
+  {
+    "id": 34,
+    "title": "Scheduling Emails Made Easy with Resend 📧",
+    "description": "Discover how Resend simplifies the process of scheduling emails, making communication more efficient and organized.",
+    "date": "2023-11-03",
+    "readTime": "8 Min",
+    "tag": "Email Management",
+    "image": "app.jpg",
+    "file": "scheduling-email-with-resend.md"
   }
 ]

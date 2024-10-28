@@ -21,7 +21,7 @@ const BlogPosts: React.FC = () => {
           </button>
         </a>
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 ">
-          {blogPosts.map((post: BlogPost, index: number) => (
+          {blogPosts.slice(0, 10).map((post: BlogPost, index: number) => (
             <div
               key={index}
               className=" relative z-10 border-gray-900 bg-transparent rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fadeIn"

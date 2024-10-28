@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import clsx from "clsx";
 
 const Projects: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

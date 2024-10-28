@@ -8,40 +8,30 @@ import {
   YoutubeIcon,
 } from "../ImageIcon";
 import {
-  ArrowRight,
   Code,
   Rocket,
   Mail,
   BriefcaseBusiness,
   CornerRightDown,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import blogPosts from "./[id]/blogPosts.json"; // Importing the blog posts JSON
-
-// Define the BlogPost interface
-interface BlogPost {
-  id: number;
-  title: string;
-  description: string;
-  date: string;
-  readTime: string;
-  tag: string;
-  image: string;
-}
 
 export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [blogPostsState, setBlogPostsState] = useState<BlogPost[]>(blogPosts); // Set initial state with imported data
   const [searchQuery, setSearchQuery] = useState<string>(""); // State for search input
 
-  // Filter blog posts based on the search query
-  const filteredPosts = blogPostsState.filter((post) =>
-    post.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Filter and sort blog posts based on the search query and date
+  const filteredPosts = blogPosts
+    .filter((post) =>
+      post.title.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) // Sort from most recent to oldest
+    .slice(0, 10);
 
   return (
     <div className=" p-10 md:p-20 flex flex-col max-w-8xl mx-auto relative">
@@ -71,24 +61,28 @@ export default function Layout({
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500"></span>
           </p>
           <div className="flex flex-col mb-10 gap-4 md:flex-grow xl:flex-row md:items-center md:justify-between mx-auto max-w-3xl">
-            <label className="text-gray-300 mb-2 md:mb-0">Subscribe</label>
-            <div className="flex flex-col w-full md:flex-row md:items-center">
+            <div className="flex flex-col md:flex-row md:items-center">
+              <label className="text-gray-300 mb-2 md:mb-0 md:mr-2">
+                Subscribe
+              </label>
               <input
                 type="email"
                 placeholder="📧 Enter your email for the newsletter"
-                className="input flex-1 w-full md:w-full lg:w-96 p-2 border rounded  mb-2 md:mb-0 md:mr-2"
+                className="input flex-1 w-full lg:w-96 p-2 border rounded mb-2 md:mb-0"
                 required
               />
             </div>
-            <button className="btn btn-outline btn-primary rounded-full transition-all duration-300 flex items-center justify-center text-center">
-              <Mail className="mr-1" /> Subscribe
-            </button>
-            <a
-              href="/"
-              className="btn btn-outline btn-primary rounded-full transition-all duration-300 flex items-center justify-center"
-            >
-              <BriefcaseBusiness className="mr-1" /> Portfolio
-            </a>
+            <div className="flex flex-col md:flex-row md:items-center">
+              <button className="btn btn-outline btn-primary rounded-full transition-all duration-300 flex items-center justify-center text-center md:mr-2 mb-2 md:mb-0">
+                <Mail className="mr-1" /> Subscribe
+              </button>
+              <a
+                href="/"
+                className="btn btn-outline btn-primary rounded-full transition-all duration-300 flex items-center justify-center"
+              >
+                <BriefcaseBusiness className="mr-1" /> Portfolio
+              </a>
+            </div>
           </div>
           {children}
         </div>
@@ -114,7 +108,7 @@ export default function Layout({
           </ul>
           <h2 className="text-2xl font-bold mb-4 pt-4 pb-4 ">Tags</h2>
           <div className="flex flex-wrap gap-2">
-            {Array.from(new Set(blogPostsState.map((post) => post.tag))).map(
+            {Array.from(new Set(blogPosts.map((post) => post.tag))).map(
               (tag) => (
                 <span key={tag} className="badge badge-primary">
                   {tag}
@@ -122,37 +116,35 @@ export default function Layout({
               )
             )}
           </div>
-          <h2 className="text-2xl font-bold mb-4 pt-4 pb-4 text-primary">
-            Follow Me
-          </h2>
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          <h2 className="text-2xl font-bold mb-4 pt-4 pb-4 ">Follow Me</h2>
+          <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <a
               href="#"
-              className="btn btn-outline btn-primary border-2 p-3 transition-all rounded-full border-gray-900"
+              className="btn btn-outline btn-primary border-2 p-3 transition-all rounded-full border-gray-900 flex items-center justify-center"
             >
               <FacebookIcon />
             </a>
             <a
               href="#"
-              className="btn btn-outline btn-primary border-2 p-3 transition-all rounded-full border-gray-900"
+              className="btn btn-outline btn-primary border-2 p-3 transition-all rounded-full border-gray-900 flex items-center justify-center"
             >
               <TwitterIcon />
             </a>
             <a
               href="#"
-              className="btn btn-outline btn-primary border-2 p-3 transition-all rounded-full border-gray-900"
+              className="btn btn-outline btn-primary border-2 p-3 transition-all rounded-full border-gray-900 flex items-center justify-center"
             >
               <DiscordIcon />
             </a>
             <a
               href="#"
-              className="btn btn-outline btn-primary border-2 p-3 transition-all rounded-full border-gray-900"
+              className="btn btn-outline btn-primary border-2 p-3 transition-all rounded-full border-gray-900 flex items-center justify-center"
             >
               <InstagramIcon />
             </a>
             <a
               href="#"
-              className="btn btn-outline btn-primary border-2 p-3 transition-all rounded-full border-gray-900"
+              className="btn btn-outline btn-primary border-2 p-3 transition-all rounded-full border-gray-900 flex items-center justify-center"
             >
               <YoutubeIcon />
             </a>
@@ -165,16 +157,10 @@ export default function Layout({
           © 2024 Hien The Phan. All rights reserved
         </p>
         <div>
-          <a
-            href="#terms"
-            className="mr-4 hover:text-purple-600 transition-colors duration-300"
-          >
+          <a href="#terms" className="mr-4 transition-colors duration-300">
             Terms of Use
           </a>
-          <a
-            href="#privacy"
-            className="hover:text-purple-600 transition-colors duration-300"
-          >
+          <a href="#privacy" className=" transition-colors duration-300">
             Privacy Policy
           </a>
         </div>
