@@ -111,13 +111,13 @@ export default function Home() {
           </span>
         </header>
 
-        <div className="absolute top-[190px] flex-none w-10 h-96 overflow-hidden">
-          <div className="top-30 left-0 w-full h-full flex flex-col gap-11">
-            <div className="w-full h-1  transform rotate-45 origin-left"></div>
-            <div className="w-full h-1  transform rotate-45 origin-left"></div>
-            <div className="w-full h-1  transform rotate-45 origin-left"></div>
-            <div className="w-full h-1  transform rotate-45 origin-left"></div>
-            <div className="w-full h-1  transform rotate-45 origin-left"></div>
+        <div className="absolute top-[230px] flex-none w-10 h-96 overflow-hidden">
+          <div className="top-40 left-0 w-full h-full flex flex-col gap-11">
+            <div className="w-full h-1 bg-primary transform rotate-45 origin-left"></div>
+            <div className="w-full h-1 bg-primary transform rotate-45 origin-left"></div>
+            <div className="w-full h-1  bg-primary transform rotate-45 origin-left"></div>
+            <div className="w-full h-1 bg-primary transform rotate-45 origin-left"></div>
+            <div className="w-full h-1 bg-primary  transform rotate-45 origin-left"></div>
           </div>
         </div>
 

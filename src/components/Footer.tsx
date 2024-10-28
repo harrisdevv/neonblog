@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <div className="flex items-end w-full mb-12 justify-end">
-              <div className="grid grid-cols-3 gap-6 text-2xl">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-2xl">
                 {[
                   { name: "discord", icon: DiscordIcon },
                   { name: "twitter", icon: TwitterIcon },
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between w-full items-center mb-8">
             <p className="text-2xl mb-4 md:mb-0">Hien The Phan</p>
             <nav>
-              <ul className="flex flex-wrap justify-center md:space-x-6 sm:space-x-2">
+              <ul className="flex flex-wrap justify-center md:space-x-6 sm:space-x-2 space-x-2">
                 <li>
                   <a
                     href="#home"

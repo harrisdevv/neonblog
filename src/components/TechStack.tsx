@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TechStack() {
   return (
-    <div className="flex gap-12 mt-12">
+    <div className="grid grid-cols-3 xl:grid-cols-6 gap-12 mt-12">
       <svg viewBox="0 0 128 128" className="">
         <path
           fill="white"

@@ -64,8 +64,8 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-20 py-36">
-      <h2 className="text-7xl font-bold mb-20 flex items-center animate-slideInLeft justify-end md:text-8xl">
+    <div className="max-w-7xl mx-auto px-2 xl:px-20 py-36">
+      <h2 className="text-6xl font-bold mb-20 flex items-center animate-slideInLeft justify-end sm:text-8xl">
         <span className="text-pink-500 ml-4 animate-bounce">←</span>
         My projects
       </h2>
@@ -173,7 +173,7 @@ const Projects: React.FC = () => {
                       </div>
                     </div>
                   ))}
-                <div className="flex">
+                <div className="grid grid-cols-1 md:grid-cols-2">
                   {project.images &&
                     project.images.length > 0 &&
                     project.images.map((image, imgIndex) => (
