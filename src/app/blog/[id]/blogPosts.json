@@ -338,5 +338,35 @@
     "tag": "Email Management",
     "image": "app.jpg",
     "file": "scheduling-email-with-resend.md"
+  },
+  {
+    "id": 35,
+    "title": "My Communication Journey as a Developer",
+    "description": "Join me on my journey as a developer, discovering the importance of communication in the tech world. Learn how humor, empathy, and feedback can transform your work environment.",
+    "date": "2023-11-04",
+    "readTime": "7 Min",
+    "tag": "Communication",
+    "image": "project1.jpg",
+    "file": "my-communication-journey-as-a-dev.md"
+  },
+  {
+    "id": 36,
+    "title": "Overcoming Imposter Syndrome: My Journey to Confidence",
+    "description": "Join me as I share my personal journey of overcoming imposter syndrome through sharing my opinions and taking action. Discover how vulnerability and community support transformed my confidence.",
+    "date": "2023-11-05",
+    "readTime": "10 Min",
+    "tag": "Personal Development",
+    "image": "app.jpg",
+    "file": "overcoming-imposter-syndrome-my-journey-to-confidence.md"
+  },
+  {
+    "id": 37,
+    "title": "Designing a Better UI for Indie Projects: My Journey to a User-Centric Experience 🎨",
+    "description": "Join me as I share my journey of transforming my indie projects through user-centric UI design. Discover the importance of empathy, iteration, and aesthetics in creating delightful user experiences.",
+    "date": "2023-11-06",
+    "readTime": "10 Min",
+    "tag": "UI Design",
+    "image": "app.jpg",
+    "file": "how-to-design-a-better-ui-for-indie-projects.md"
   }
 ]

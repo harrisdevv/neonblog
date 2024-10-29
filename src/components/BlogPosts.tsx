@@ -12,11 +12,11 @@ interface BlogPost {
 
 const BlogPosts: React.FC = () => {
   return (
-    <section className="py-36 bg-black text-white relative z-3">
+    <section className="py-36 bg-black  relative z-3">
       <div className="container mx-auto px-4 relative z-3">
         <h2 className="text-7xl font-bold mb-8 animate-fadeIn">My blog</h2>
         <a href="/blog">
-          <button className="bg-purple-600 font-bold text-white px-6 py-2 rounded-full mb-8 hover: transition-all duration-300 animate-fadeIn relative z-10">
+          <button className="btn btn-secondary btn-lg font-bold  px-6 py-2 rounded-full mb-8  transition-all duration-300 animate-fadeIn relative z-10">
             See all
           </button>
         </a>
