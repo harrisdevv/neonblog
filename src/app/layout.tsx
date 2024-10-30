@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "HinCode | Coding is fun",
+  title: "HienSpace | Coding is fun",
   description:
     "Innovative Insights and Tutorials on Web Development by Hien Phan",
   icons: {

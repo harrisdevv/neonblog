@@ -5,10 +5,13 @@ import Image from "next/image";
 import blogPosts from "./[id]/blogPosts.json"; // Import blog posts directly
 
 const BlogPage: React.FC = () => {
+  const filteredPosts = blogPosts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  ); // Sort from most recent to oldest
   return (
     <>
       <div className="space-y-10">
-        {blogPosts.map((post) => (
+        {filteredPosts.map((post) => (
           <div
             key={post.id}
             className="bg-gray-800 p-6 rounded-lg shadow-lg flex"
@@ -31,9 +34,10 @@ const BlogPage: React.FC = () => {
                 <span className="badge badge-primary rounded-full px-3 py-1 text-sm font-semibold mr-2">
                   {post.tag}
                 </span>
-                <span className="text-gray-400">
-                  <span className="text-white">Date</span> {post.date} |{" "}
-                  <span className="text-white">Read</span> {post.readTime}
+                <span className="text-gray-400 flex items-center">
+                  <span className="font-bold mr-2">Date:</span> {post.date}
+                  <div className="divider divider-horizontal mx-4"></div>
+                  <span className="font-bold mr-2 ">Read:</span> {post.readTime}
                 </span>
               </div>
             </div>

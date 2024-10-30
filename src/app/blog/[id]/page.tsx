@@ -21,6 +21,12 @@ const BlogPost = async ({ params }: { params: { id: string } }) => {
   );
   const markdownContent = fs.readFileSync(markdownFilePath, "utf-8");
 
+  // Find previous and next posts by date
+  const sortedPosts = blogPosts.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  const currentIndex = sortedPosts.findIndex((p) => p.id === foundPost.id);
+  const previousPost = sortedPosts[currentIndex - 1] || null;
+  const nextPost = sortedPosts[currentIndex + 1] || null;
+
   return (
     <div>
       <h1 className="text-4xl font-extrabold text-primary mb-8">
@@ -52,20 +58,24 @@ const BlogPost = async ({ params }: { params: { id: string } }) => {
       <MarkdownRenderer content={markdownContent} />
       {/* Render the Markdown content */}
       <div className="flex justify-between mt-6">
-        <a
-          href="/blog/previous-post"
-          className="flex items-center text-primary hover:underline"
-        >
-          <ArrowLeft className="mr-1" /> {/* Add the left arrow icon */}
-          Previous Post
-        </a>
-        <a
-          href="/blog/next-post"
-          className="flex items-center text-primary hover:underline"
-        >
-          Next Post
-          <ArrowRight className="ml-1" /> {/* Add the right arrow icon */}
-        </a>
+        {previousPost && (
+          <a
+            href={`/blog/${previousPost.id}`}
+            className="flex items-center text-primary hover:underline"
+          >
+            <ArrowLeft className="mr-1" /> {/* Add the left arrow icon */}
+            Previous Post
+          </a>
+        )}
+        {nextPost && (
+          <a
+            href={`/blog/${nextPost.id}`}
+            className="flex items-center text-primary hover:underline"
+          >
+            Next Post
+            <ArrowRight className="ml-1" /> {/* Add the right arrow icon */}
+          </a>
+        )}
       </div>
     </div>
   );

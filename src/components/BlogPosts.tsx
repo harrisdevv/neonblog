@@ -1,5 +1,6 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import blogPosts from "../app/blog/[id]/blogPosts.json";
 
 interface BlogPost {
@@ -11,21 +12,30 @@ interface BlogPost {
 }
 
 const BlogPosts: React.FC = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const filteredPosts = blogPosts
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) // Sort from most recent to oldest
+    .slice(0, 9);
+
   return (
-    <section className="py-36 bg-black  relative z-3">
+    <section className="py-36 bg-black relative z-3" ref={ref}>
       <div className="container mx-auto px-4 relative z-3">
         <h2 className="text-7xl font-bold mb-8 animate-fadeIn">My blog</h2>
         <a href="/blog">
-          <button className="btn btn-secondary btn-lg font-bold  px-6 py-2 rounded-full mb-8  transition-all duration-300 animate-fadeIn relative z-10">
+          <button className="btn btn-secondary btn-lg font-bold px-6 py-2 rounded-full mb-8 transition-all duration-300 animate-fadeIn relative z-10">
             See all
           </button>
         </a>
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 ">
-          {blogPosts.slice(0, 10).map((post: BlogPost, index: number) => (
-            <div
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          {isInView && filteredPosts.map((post: BlogPost, index: number) => (
+            <motion.div
               key={index}
-              className=" relative z-10 border-gray-900 bg-transparent rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fadeIn"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="relative z-10 border-gray-900 bg-transparent rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <Image
                 src={`/${post.image}`}
@@ -39,12 +49,12 @@ const BlogPosts: React.FC = () => {
                 <p className="text-gray-400 mb-4">{post.description}</p>
                 <a
                   href={`blog/${post.id}`}
-                  className="text-purple-500  transition-colors duration-300 text-xl"
+                  className="text-purple-500 transition-colors duration-300 text-xl"
                 >
                   Read more &gt;&gt;
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         <div className="absolute top-10 left-10 bg-blue-800 w-96 h-96 blur-3xl opacity-15 rounded-full z-1 "></div>

@@ -1,16 +1,48 @@
 "use client";
 
-import React from "react";
-import ArcComponent from './ArcComponent';
+import React, { useState } from "react";
+import ArcComponent from "./ArcComponent";
+import { motion, useInView } from "framer-motion";
 
 const Contact: React.FC = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const firstName = fullName.split(" ")[0]; // Extract first name
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ firstName, email, message }),
+    });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+    } else {
+      alert("Failed to send message.");
+    }
+  };
+
   return (
     <div className="bg-black text-white p-10 md:px-20 py-36 animate-fadeIn relative">
       <div className="max-w-2xl mx-auto ">
-        <h1 className="text-7xl md:text-8xl font-bold mb-8 animate-slideInLeft text-center">
+        <motion.h1
+          ref={ref}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
+          className="text-7xl md:text-8xl font-bold mb-8 text-center"
+        >
           Contact me
-        </h1>
-        <form className="space-y-8 mt-10 relative z-20">
+        </motion.h1>
+        <form className="space-y-8 mt-10 relative z-20" onSubmit={handleSubmit}>
           <div>
             <label
               htmlFor="fullName"
@@ -23,6 +55,8 @@ const Contact: React.FC = () => {
               type="text"
               placeholder="Enter your full name ..."
               required
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
               className="w-full px-6 py-4 bg-pink-400/10 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-300"
             />
           </div>
@@ -38,6 +72,8 @@ const Contact: React.FC = () => {
               type="email"
               placeholder="Enter your email ..."
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full px-6 py-4 bg-pink-400/10 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-300"
             />
           </div>
@@ -52,6 +88,8 @@ const Contact: React.FC = () => {
               id="message"
               placeholder="Enter your message ..."
               required
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               className="w-full px-6 py-4 bg-pink-400/10 rounded-3xl h-32 focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-300"
             ></textarea>
 
@@ -65,7 +103,6 @@ const Contact: React.FC = () => {
           </button>
         </form>
       </div>
-
 
       <div className="absolute top-10 right-10  w-96 h-96 blur-3xl opacity-15 rounded-full z-10 hidden md:block"></div>
       <div className="absolute top-10 left-10  w-96 h-96 blur-3xl opacity-15 rounded-full z-10 hidden md:block"></div>

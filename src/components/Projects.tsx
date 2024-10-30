@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const Projects: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +10,8 @@ const Projects: React.FC = () => {
     null
   );
   const [pageTitle, setPageTitle] = useState<string | null>(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const projects = [
     {
@@ -64,116 +66,64 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-2 xl:px-20 py-36">
+    <div className="max-w-7xl mx-auto px-2 xl:px-20 py-36" ref={ref}>
       <h2 className="text-6xl font-bold mb-20 flex items-center animate-slideInLeft justify-end sm:text-8xl">
         <span className="text-pink-500 ml-4 animate-bounce">←</span>
         My projects
       </h2>
-      {projects.map((project, index) => (
-        <div
-          key={index}
-          className={`mb-32 animate-fadeIn flex relative ${index === 0 ? "h-[1500px]" : ""}`}
-          style={{ animationDelay: `${index * 0.3}s` }}
-        >
-          {index % 2 === 0 && (
-            <>
-              <div className="flex flex-col text-end mr-8 w-1/2">
-                <h2 className="text-4xl md:text-6xl font-bold animate-slideInLeft">
-                  {project.name}
-                </h2>
-                <p className="text-3xl md:text-4xl text-gray-400 mt-4 md:mt-0">
-                  {project.date}
-                </p>
-                {project.description.split("\n").map((desc, idx) => (
-                  <p
-                    key={idx}
-                    className="text-lg md:text-xl text-gray-300 mt-2 mb-4"
-                  >
-                    {desc}
+      {isInView &&
+        projects.map((project, index) => (
+          <motion.div
+            key={index}
+            className={`mb-32 flex relative ${index === 0 ? "h-[1500px]" : ""}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: index * 0.3 }}
+          >
+            {index % 2 === 0 && (
+              <>
+                <div className="flex flex-col text-end mr-8 w-1/2">
+                  <h2 className="text-4xl md:text-6xl font-bold animate-slideInLeft">
+                    {project.name}
+                  </h2>
+                  <p className="text-3xl md:text-4xl text-gray-400 mt-4 md:mt-0">
+                    {project.date}
                   </p>
-                ))}
-
-                <div className="grid grid-cols-12 mt-12 gap-5">
-                  {Array.from({ length: 24 }).map((_, index) => (
-                    <div
-                      key={index}
-                      className="w-2 h-2 bg-violet-900 rounded-full blur-none"
-                    ></div>
-                  ))}
-                </div>
-              </div>
-              <div className="relative group flex flex-col w-2/3 h-auto">
-                {project.videos &&
-                  project.videos.length > 0 &&
-                  project.videos.map((video, vidIndex) => (
-                    <div key={vidIndex} className="relative">
-                      <video
-                        controls
-                        className="w-full h-auto rounded-3xl transition-all duration-300 group-hover:shadow-2xl mb-2"
-                      >
-                        <source src={video.src} type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                      <div className="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2">
-                        ✨ {video.title}
-                      </div>
-                    </div>
-                  ))}
-                {project.images &&
-                  project.images.length > 0 &&
-                  project.images.map((image, imgIndex) => (
-                    <div
-                      key={imgIndex}
-                      onClick={() =>
-                        openModal(image.src, project.name, image.title)
-                      }
-                      className="relative group"
+                  {project.description.split("\n").map((desc, idx) => (
+                    <p
+                      key={idx}
+                      className="text-lg md:text-xl text-gray-300 mt-2 mb-4"
                     >
-                      <Image
-                        src={image.src}
-                        alt={`${project.name} image ${imgIndex + 1}`}
-                        width={600}
-                        height={300}
-                        className={`w-full h-auto hover:scale-105 rounded-3xl transition-all duration-300 group-hover:shadow-2xl mb-2 cursor-pointer`}
-                        style={{
-                          top: `${imgIndex * 300}px`,
-                          position: "absolute",
-                        }}
-                      />
+                      {desc}
+                    </p>
+                  ))}
+
+                  <div className="grid grid-cols-12 mt-12 gap-5">
+                    {Array.from({ length: 24 }).map((_, index) => (
                       <div
-                        className="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-lg group-hover:z-50 " // Added "group-hover:z-50" class here
-                        style={{
-                          top: `${imgIndex * 300}px`,
-                        }}
-                      >
-                        ✨ {image.title}
+                        key={index}
+                        className="w-2 h-2 bg-violet-900 rounded-full blur-none"
+                      ></div>
+                    ))}
+                  </div>
+                </div>
+                <div className="relative group flex flex-col w-2/3 h-auto">
+                  {project.videos &&
+                    project.videos.length > 0 &&
+                    project.videos.map((video, vidIndex) => (
+                      <div key={vidIndex} className="relative">
+                        <video
+                          controls
+                          className="w-full h-auto rounded-3xl transition-all duration-300 group-hover:shadow-2xl mb-2"
+                        >
+                          <source src={video.src} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                        <div className="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2">
+                          ✨ {video.title}
+                        </div>
                       </div>
-                    </div>
-                  ))}
-              </div>
-            </>
-          )}
-          {index % 2 === 1 && (
-            <>
-              <div className="relative group flex flex-col w-2/3">
-                {project.videos &&
-                  project.videos.length > 0 &&
-                  project.videos.map((video, vidIndex) => (
-                    <div key={vidIndex} className="relative">
-                      <video
-                        controls
-                        autoPlay={true}
-                        className="w-full h-auto rounded-3xl transition-all duration-300 group-hover:shadow-2xl mb-2"
-                      >
-                        <source src={video.src} type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                      <div className="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2">
-                        ✨ {video.title}
-                      </div>
-                    </div>
-                  ))}
-                <div className="grid grid-cols-1 md:grid-cols-2">
+                    ))}
                   {project.images &&
                     project.images.length > 0 &&
                     project.images.map((image, imgIndex) => (
@@ -182,50 +132,105 @@ const Projects: React.FC = () => {
                         onClick={() =>
                           openModal(image.src, project.name, image.title)
                         }
-                        className=""
+                        className="relative group"
                       >
-                        <div className="top-50 left-0 bg-black bg-opacity-50 text-white p-2 text-lg">
-                          ✨ {image.title}
-                        </div>
                         <Image
                           src={image.src}
                           alt={`${project.name} image ${imgIndex + 1}`}
                           width={600}
                           height={300}
-                          className="w-full h-auto rounded-3xl transition-all hover:scale-105 duration-300 group-hover:shadow-2xl mb-2 cursor-pointer"
+                          className={`w-full h-auto hover:scale-105 rounded-3xl transition-all duration-300 group-hover:shadow-2xl mb-2 cursor-pointer`}
+                          style={{
+                            top: `${imgIndex * 300}px`,
+                            position: "absolute",
+                          }}
                         />
+                        <div
+                          className="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-lg group-hover:z-50 "
+                          style={{
+                            top: `${imgIndex * 300}px`,
+                          }}
+                        >
+                          ✨ {image.title}
+                        </div>
                       </div>
                     ))}
                 </div>
-              </div>
-              <div className="flex flex-col ml-8 w-1/2">
-                <h2 className="text-4xl md:text-6xl font-bold animate-slideInLeft">
-                  {project.name}
-                </h2>
-                <p className="text-3xl md:text-4xl text-gray-400 mt-4 md:mt-0">
-                  {project.date}
-                </p>
-                {project.description.split("\n").map((desc, idx) => (
-                  <p
-                    key={idx}
-                    className="text-lg md:text-xl text-gray-300 mt-2 mb-4"
-                  >
-                    {desc}
-                  </p>
-                ))}
-                <div className="grid grid-cols-12 mt-12 gap-5">
-                  {Array.from({ length: 24 }).map((_, index) => (
-                    <div
-                      key={index}
-                      className="w-2 h-2 bg-violet-900 rounded-full blur-none"
-                    ></div>
-                  ))}
+              </>
+            )}
+            {index % 2 === 1 && (
+              <>
+                <div className="relative group flex flex-col w-2/3">
+                  {project.videos &&
+                    project.videos.length > 0 &&
+                    project.videos.map((video, vidIndex) => (
+                      <div key={vidIndex} className="relative">
+                        <video
+                          controls
+                          autoPlay={true}
+                          className="w-full h-auto rounded-3xl transition-all duration-300 group-hover:shadow-2xl mb-2"
+                        >
+                          <source src={video.src} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                        <div className="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2">
+                          ✨ {video.title}
+                        </div>
+                      </div>
+                    ))}
+                  <div className="grid grid-cols-1 md:grid-cols-2">
+                    {project.images &&
+                      project.images.length > 0 &&
+                      project.images.map((image, imgIndex) => (
+                        <div
+                          key={imgIndex}
+                          onClick={() =>
+                            openModal(image.src, project.name, image.title)
+                          }
+                          className=""
+                        >
+                          <div className="top-50 left-0 bg-black bg-opacity-50 text-white p-2 text-lg">
+                            ✨ {image.title}
+                          </div>
+                          <Image
+                            src={image.src}
+                            alt={`${project.name} image ${imgIndex + 1}`}
+                            width={600}
+                            height={300}
+                            className="w-full h-auto rounded-3xl transition-all hover:scale-105 duration-300 group-hover:shadow-2xl mb-2 cursor-pointer"
+                          />
+                        </div>
+                      ))}
+                  </div>
                 </div>
-              </div>
-            </>
-          )}
-        </div>
-      ))}
+                <div className="flex flex-col ml-8 w-1/2">
+                  <h2 className="text-4xl md:text-6xl font-bold animate-slideInLeft">
+                    {project.name}
+                  </h2>
+                  <p className="text-3xl md:text-4xl text-gray-400 mt-4 md:mt-0">
+                    {project.date}
+                  </p>
+                  {project.description.split("\n").map((desc, idx) => (
+                    <p
+                      key={idx}
+                      className="text-lg md:text-xl text-gray-300 mt-2 mb-4"
+                    >
+                      {desc}
+                    </p>
+                  ))}
+                  <div className="grid grid-cols-12 mt-12 gap-5">
+                    {Array.from({ length: 24 }).map((_, index) => (
+                      <div
+                        key={index}
+                        className="w-2 h-2 bg-violet-900 rounded-full blur-none"
+                      ></div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
+          </motion.div>
+        ))}
       <a
         href="https://github.com/harrisdevv"
         className="relative z-2 flex justify-center text-center text-xl md:text-2xl text-purple-500 hover:text-purple-300 transition-colors duration-300 cursor-pointer"
