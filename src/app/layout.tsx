@@ -8,11 +8,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "HienSpace | Coding is fun",
+  title: "HienSpace | Coding is Fun",
   description:
-    "Innovative Insights and Tutorials on Web Development by Hien Phan",
+    "Discover innovative insights and tutorials on web development by Hien Phan. Join us to elevate your coding skills and explore the latest trends and technologies in the web development sphere.",
+  keywords:
+    "web development, coding tutorials, Hien Phan, innovative insights, programming, frontend development, backend development, JavaScript, React, Next.js",
+  authors: [{ name: "Hien Phan", url: "https://yourwebsite.com" }],
+  openGraph: {
+    title: "HienSpace | Coding is Fun",
+    description:
+      "Join Hien Phan on a journey through web development with insightful tutorials and resources.",
+    url: "https://yourwebsite.com", // Replace with your actual site URL
+    images: "/programmer.png",
+    type: "website",
+  },
   icons: {
     icon: "/programmer.png",
+    shortcut: "/programmer.png",
+    apple: "/programmer.png",
   },
 };
 

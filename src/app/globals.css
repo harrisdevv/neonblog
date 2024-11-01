@@ -7,6 +7,88 @@
   --foreground: #171717; */
 }
 
+/* In your global CSS or custom Tailwind CSS file */
+@layer utilities {
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 50% 50%;
+    }
+    50% {
+      background-position: 60% 60%;
+    }
+    100% {
+      background-position: 50% 50%;
+    }
+  }
+
+  .bg-radial-gradient {
+    background: radial-gradient(
+        circle at 15% 50%,
+        #000000,
+        /* Dark black on the left */ transparent 35%
+      ),
+      radial-gradient(
+        circle at 75% 20%,
+        #0073e6,
+        /* Blue in the top right corner */ transparent 40%
+      ),
+      radial-gradient(
+        circle at 85% 50%,
+        #8a2be2,
+        /* Violet in the middle right */ transparent 40%
+      ),
+      radial-gradient(
+        circle at 90% 80%,
+        #ff1493,
+        /* Pink in the bottom right */ transparent 45%
+      );
+    background-size: 200% 200%;
+    animation: gradientAnimation 8s ease-in-out infinite;
+  }
+  /* In your global CSS or custom Tailwind CSS file */
+  @keyframes twinkling {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-200px);
+    }
+  }
+
+  .bg-animated-stars {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Star dots */
+  .bg-animated-stars::before,
+  .bg-animated-stars::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, gray 1px, transparent 1px) repeat;
+    background-size: 40px 40px;
+    opacity: 0.5;
+    animation: twinkling 8s ease-in-out infinite alternate;
+  }
+
+  .bg-animated-stars::before {
+    animation-delay: 0s;
+    transform: translate(0px, 0px);
+  }
+
+  .bg-animated-stars::after {
+    animation-delay: 4s;
+    transform: translate(-20px, -20px);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

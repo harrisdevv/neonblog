@@ -32,9 +32,14 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="min-h-screen flex flex-col bg-gradient-to-br from-black to-purple-900 text-white"
+      className="min-h-screen flex flex-col bg-gradient-to-br from-black to-purple-900 text-white "
     >
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-radial-gradient bg-animated-stars ">
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
         <header className="flex justify-center items-center w-11/12 mx-auto left-1/2 -translate-x-1/2 p-[0.9px] rounded-full fixed top-1 z-50 bg-black/30 backdrop-blur-md bg-gradient-to-r from-blue-500 to-purple-500">
           <span className="flex justify-between items-center w-full bg-gray-900 text-white rounded-full pr-2 pl-4 py-2">
             <div
