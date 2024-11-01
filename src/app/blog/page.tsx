@@ -8,23 +8,25 @@ const BlogPage: React.FC = () => {
   const filteredPosts = blogPosts.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   ); // Sort from most recent to oldest
+
   return (
     <>
       <div className="space-y-10">
         {filteredPosts.map((post) => (
           <div
             key={post.id}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg flex"
+            className="relative group bg-gray-900 p-6 rounded-lg  flex overflow-hidden"
           >
+            <div className="absolute inset-0 bg-blue-900/30 transition-all duration-300 transform origin-bottom scale-y-0 group-hover:scale-y-100" />
             <Image
               width={200}
               height={200}
               src={`/${post.image}`}
               alt={post.title}
-              className="w-1/3 h-full object-cover rounded-lg mr-6"
+              className="w-1/3 h-full mt-4 object-cover rounded-lg mr-6 z-10"
             />
-            <div className="flex-1">
-              <h2 className="text-3xl text-primary">
+            <div className="flex-1 z-10 relative">
+              <h2 className="text-3xl text-white">
                 <a href={`blog/${post.id}`} className="hover:underline">
                   {post.title}
                 </a>

@@ -49,11 +49,11 @@
   @keyframes twinkling {
     0%,
     100% {
-      opacity: 0.5;
+      opacity: 0.2;
       transform: translateY(0);
     }
     50% {
-      opacity: 1;
+      opacity: 0.5;
       transform: translateY(-200px);
     }
   }
@@ -72,7 +72,7 @@
     left: 0;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, gray 1px, transparent 1px) repeat;
+    background: radial-gradient(circle, darkgray 1px, transparent 1px) repeat;
     background-size: 40px 40px;
     opacity: 0.5;
     animation: twinkling 8s ease-in-out infinite alternate;

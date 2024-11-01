@@ -60,7 +60,8 @@ export default function Layout({
               className="w-16 h-16 rounded-full mr-3"
             />
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-primary flex items-center">
-              HienSpace
+              <span className="font-bold -rotate-6 mr-2">Hien</span>{" "}
+              <span className="rotate-6 text-gray-300">space</span>
               <Rocket className="ml-2" />
               <Code className="ml-2" />
               <Book className="ml-2" />

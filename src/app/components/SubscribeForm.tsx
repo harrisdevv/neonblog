@@ -3,7 +3,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { BriefcaseBusiness, Mail } from "lucide-react";
+import { BriefcaseBusiness, CircleArrowRight, Mail } from "lucide-react";
 import { useState } from "react";
 
 const schema = z.object({
@@ -54,6 +54,7 @@ export default function SubscribeForm() {
             className="text-gray-300 mb-2 sm:mb-0 transition-all duration-300 hover:text-blue-500 hover:scale-105 hover:font-bold"
           >
             Subscribe me
+            <CircleArrowRight className="ml-2 inline" />
           </label>
           <input
             id="email"

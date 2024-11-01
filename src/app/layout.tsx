@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "web development, coding tutorials, Hien Phan, innovative insights, programming, frontend development, backend development, JavaScript, React, Next.js",
   authors: [{ name: "Hien Phan", url: "https://yourwebsite.com" }],
   openGraph: {
-    title: "HienSpace | Coding is Fun",
+    title: "HienSpace | Unleashing Creativity Through Code",
     description:
       "Join Hien Phan on a journey through web development with insightful tutorials and resources.",
     url: "https://yourwebsite.com", // Replace with your actual site URL

@@ -137,7 +137,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="absolute top-1/3 -left-10  w-96 h-96 blur-3xl opacity-20 rounded-full"></div>
+        <div className="absolute top-1/3 -left-10 bg-blue-500 w-96 h-96 blur-3xl opacity-20 rounded-full -z-0"></div>
       </div>
     </footer>
   );

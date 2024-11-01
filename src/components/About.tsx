@@ -21,7 +21,7 @@ const About = () => {
   return (
     <motion.div
       ref={ref}
-      className="mx-auto flex flex-col md:flex-row items-center justify-center bg-black text-white p-10 md:p-20 relative"
+      className="mx-auto flex flex-col md:flex-row items-center justify-center bg-black text-white p-10 md:p-20 md:py-36 relative"
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -65,6 +65,7 @@ const About = () => {
       <div className="absolute right-80 text-8xl text-purple-600 animate-bounce hidden md:block">
         →
       </div>
+      <div className="absolute top-10 -left-10 bg-blue-500 w-96 h-96 blur-3xl opacity-20 rounded-full -z-0"></div>
       <div className="absolute right-72 w-40 h-40 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full opacity-50 blur-3xl animate-pulse "></div>
       <DotPattern />
     </motion.div>
