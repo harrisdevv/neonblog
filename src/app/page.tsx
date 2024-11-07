@@ -15,8 +15,8 @@ import {
   SendIcon,
 } from "./ImageIcon";
 import { useRouter } from "next/navigation";
-import { Github } from "lucide-react";
 import { motion } from "framer-motion";
+import { Code, GitBranch, Github } from "lucide-react";
 
 const socialLinks = [
   { href: "#discord", icon: <DiscordIcon /> },
@@ -49,17 +49,10 @@ export default function Home() {
                 }
               }}
             >
-              <Image
-                src="/programmer.png"
-                alt="Programmer Icon"
-                width={30}
-                height={30}
-                className="mr-2"
-              />
-              <span className="text-primary -rotate-6">Hien👨</span>
+              <span className="text-primary -rotate-6 md:ml-2">Hien👨</span>
               <span className="rotate-6 text-gray-200">space</span>
             </div>
-            <nav className="hidden md:flex ">
+            <nav className="hidden lg:flex ">
               <a
                 href="#home"
                 className="btn btn-ghost transition-all duration-300"
@@ -97,6 +90,53 @@ export default function Home() {
                 Contact
               </a>
             </nav>
+            <div className="navbar-start lg:hidden pl-1">
+              <div className="dropdown">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h7"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-28 p-2 shadow"
+                >
+                  <li>
+                    <a href="#home">Home</a>
+                  </li>
+                  <li>
+                    <a href="#about">About</a>
+                  </li>
+                  <li>
+                    <a href="#skills">Skills</a>
+                  </li>
+                  <li>
+                    <a href="#projects">Projects</a>
+                  </li>
+                  <li>
+                    <a href="#blog-posts">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div className="flex items-center gap-4">
               <a
                 href="#contact"
@@ -105,26 +145,10 @@ export default function Home() {
                 Contact me
               </a>
             </div>
-            <button className="md:hidden" aria-label="Toggle Navigation">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
           </span>
         </header>
 
-        <div className="absolute top-[230px] flex-none w-10 h-96 overflow-hidden z-40">
+        <div className="absolute top-[260px] flex-none w-10 h-96 overflow-hidden z-40">
           <div className="top-40 left-0 w-full h-full flex flex-col gap-11">
             <div className="w-full h-1 bg-primary transform rotate-45 origin-left"></div>
             <div className="w-full h-1 bg-primary transform rotate-45 origin-left"></div>
@@ -134,7 +158,7 @@ export default function Home() {
           </div>
         </div>
 
-        <main className="flex justify-between items-center px-20 py-16 gap-12 mt-24 max-w-8xl mx-auto relative z-40">
+        <main className="flex justify-between items-center px-20 py-10 gap-12 mt-24 max-w-8xl mx-auto relative z-40">
           <motion.div
             className="flex flex-grow flex-col items-start"
             initial={{ opacity: 0, y: 20 }}
@@ -164,13 +188,25 @@ export default function Home() {
           <div className="relative animate-float">
             <div className="absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-br from-cyan-400 to-purple-400 rounded-full opacity-50 blur-3xl animate-pulse"></div>
             <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-gradient-to-br from-pink-400 to-blue-400 rounded-full opacity-30 blur-2xl animate-pulse delay-400"></div>
-            <Image
-              src="/avatar.png"
-              alt="Hien The Phan"
-              width={400}
-              height={400}
-              className="rounded-full relative z-10 shadow-lg right-10"
-            />
+            <div className="flex items-start">
+              <div className="flex flex-col space-y-2 -mr-20 relative z-20">
+                <button className="btn btn-sm md:btn-md lg:btn-lg btn-primary btn-circle absolute top-8 md:top-32 md:right-24 right-14  flex items-center transition-transform duration-300 hover:scale-105">
+                  <Code />
+                </button>
+                <button className="btn btn-sm md:btn-md lg:btn-lg btn-primary absolute -top-3 md:top-2 lg:top-5 md:right-8 right-4 btn-circle flex items-center transition-transform duration-300 hover:scale-105">
+                  <GitBranch />
+                </button>
+              </div>
+              <div className="relative">
+                <Image
+                  src="/avatar.png"
+                  alt="Hien The Phan"
+                  width={500}
+                  height={500}
+                  className="rounded-full relative z-10 right-4 md:right-10 p-4 md:p-8 border-t-2 border-dotted border-primary"
+                />
+              </div>
+            </div>
           </div>
         </main>
         <div className="absolute right-8 top-1/3 transform -translate-y-1/3 flex flex-col gap-6 z-40 ">
