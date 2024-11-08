@@ -16,7 +16,8 @@ import {
 } from "./ImageIcon";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Code, GitBranch, Github } from "lucide-react";
+import { Github } from "lucide-react";
+import ImageAndIcons from "@/components/ImageAndIcons";
 
 const socialLinks = [
   { href: "#discord", icon: <DiscordIcon /> },
@@ -38,7 +39,7 @@ export default function Home() {
         <header className="flex justify-center items-center w-11/12 mx-auto left-1/2 -translate-x-1/2 p-[1.2px] rounded-full fixed top-1 z-50 bg-black/30 backdrop-blur-md bg-gradient-to-r from-blue-500 to-purple-500">
           <span className="flex justify-between items-center w-full bg-gray-900 text-white rounded-full pr-2 pl-4 py-2">
             <div
-              className="flex items-center text-2xl font-bold cursor-pointer" // Added cursor-pointer for better UX
+              className="flex items-center  text-xl md:text-2xl font-bold cursor-pointer" // Added cursor-pointer for better UX
               role="button" // Added role for accessibility
               tabIndex={0} // Added tabIndex for keyboard accessibility
               onClick={() => router.push("/")}
@@ -49,7 +50,7 @@ export default function Home() {
                 }
               }}
             >
-              <span className="text-primary -rotate-6 md:ml-2">Hien👨</span>
+              <span className="text-primary -rotate-6 md:ml-2 ">Hien👨</span>
               <span className="rotate-6 text-gray-200">space</span>
             </div>
             <nav className="hidden lg:flex ">
@@ -185,36 +186,7 @@ export default function Home() {
               of Vietnam.
             </p>
           </motion.div>
-          <div className="relative animate-float">
-            <div className="absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-br from-cyan-400 to-purple-400 rounded-full opacity-50 blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-gradient-to-br from-pink-400 to-blue-400 rounded-full opacity-30 blur-2xl animate-pulse delay-400"></div>
-            <div className="flex items-start">
-              <div className="flex flex-col space-y-2 -mr-20 relative z-20">
-                <button className="btn btn-sm md:btn-md lg:btn-lg btn-primary btn-circle absolute top-8 md:top-32 md:right-24 right-14  flex items-center transition-transform duration-300 hover:scale-105">
-                  <Code />
-                </button>
-                <button className="btn btn-sm md:btn-md lg:btn-lg btn-primary absolute -top-3 md:top-2 lg:top-5 md:right-8 right-4 btn-circle flex items-center transition-transform duration-300 hover:scale-105">
-                  <GitBranch />
-                </button>
-              </div>
-              <div className="relative">
-                <Image
-                  src="/coporate_shirt_removebg.png"
-                  alt="Hien The Phan"
-                  width={500}
-                  height={500}
-                  className="rounded-full relative z-10 right-4 md:right-10 p-4 md:p-6 border-t-2 border-dashed border-purple-500"
-                />
-                <Image
-                  src="/avatar_thor.jpg"
-                  alt="Hien The Phan"
-                  width={500}
-                  height={500}
-                  className="rounded-full relative z-10 right-4 md:right-10 p-4 md:p-6 border-t-2 border-dashed border-purple-500"
-                />
-              </div>
-            </div>
-          </div>
+          <ImageAndIcons />
         </main>
         <div className="absolute right-8 top-1/3 transform -translate-y-1/3 flex flex-col gap-6 z-40 ">
           {socialLinks.map((link, index) => (
