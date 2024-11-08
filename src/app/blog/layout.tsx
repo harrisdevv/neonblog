@@ -81,15 +81,15 @@ export default function Layout({
           {children}
         </div>
         <div className="w-1/4 ml-10 relative z-20">
-          <h2 className="text-2xl font-bold mb-4 pt-4 pb-4 ">Search</h2>
+          <h2 className="text-2xl font-bold mb-4 pt-4 pb-4 text-gray-300">Search</h2>
           <input
             type="text"
             placeholder="Type something..."
-            className="w-full p-2 input rounded"
+            className="w-full p-2 bg-gray-800 text-white placeholder-gray-400 rounded transition-all focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)} // Update search query state
           />
-          <h2 className="text-2xl font-bold mb-4 pt-4 pb-4">Recent Posts</h2>
+          <h2 className="text-2xl font-bold mb-4 pt-4 pb-4 text-gray-300">Recent Posts</h2>
           <ul className="space-y-2">
             {filteredPosts.map((post) => (
               <li key={post.id}>
@@ -100,7 +100,7 @@ export default function Layout({
               </li>
             ))}
           </ul>
-          <h2 className="text-2xl font-bold mb-4 pt-4 pb-4 ">Tags</h2>
+          <h2 className="text-2xl font-bold mb-4 pt-4 pb-4 text-gray-300">Tags</h2>
           <div className="flex flex-wrap gap-2">
             {Array.from(new Set(blogPosts.map((post) => post.tag))).map(
               (tag) => (
@@ -110,7 +110,7 @@ export default function Layout({
               )
             )}
           </div>
-          <h2 className="text-2xl font-bold mb-4 pt-4 pb-4 ">Follow Me</h2>
+          <h2 className="text-2xl font-bold mb-4 pt-4 pb-4 text-gray-300">Follow Me</h2>
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <a
               href="#"
@@ -143,14 +143,14 @@ export default function Layout({
               <YoutubeIcon />
             </a>
           </div>
-          <h2 className="text-2xl font-bold mb-4 pt-4 pb-4">Blog by Month</h2>
+          <h2 className="text-2xl font-bold mb-4 pt-4 pb-4 text-gray-300">Blog by Month</h2>
           <div className="accordion">
             {Object.keys(groupedPosts)
               .reverse()
               .map((month) => (
                 <div key={month} className="collapse collapse-arrow">
                   <input type="checkbox" className="peer" />
-                  <div className="collapse-title ">{month}</div>
+                  <div className="collapse-title text-gray-400">{month}</div>
                   <div className="collapse-content">
                     <ul className="space-y-2">
                       {groupedPosts[month].map((post) => (

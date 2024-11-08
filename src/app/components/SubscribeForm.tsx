@@ -61,7 +61,7 @@ export default function SubscribeForm() {
             type="email"
             {...register("email")}
             placeholder="Enter your email"
-            className="input flex-1 w-full lg:w-96 p-2 border rounded mb-2 sm:mb-0"
+            className="input input-ghost flex-1 w-full lg:w-96 p-2 border rounded mb-2 sm:mb-0 bg-gray-800 text-white placeholder-gray-400 border-gray-600 focus:ring focus:ring-blue-500 focus:border-blue-500"
           />
           {errors.email && (
             <span className="text-red-500">

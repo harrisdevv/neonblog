@@ -8,7 +8,7 @@ const ImageAndIcons = () => {
       <div className="flex items-start">
         <div className="flex flex-col space-y-2 -mr-20 relative z-20">
           <motion.button
-            className="btn btn-sm md:btn-md lg:btn-lg animate-pulse btn-primary btn-circle absolute top-8 md:top-32 md:right-24 right-14 flex items-center transition-transform duration-3000 hover:scale-105"
+            className="btn btn-sm md:btn-md lg:btn-lg shadow-xl animate-pulse btn-primary btn-circle absolute top-8 md:top-32 md:right-24 right-14 flex items-center transition-transform duration-3000 hover:scale-105"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.3 }}
@@ -16,7 +16,7 @@ const ImageAndIcons = () => {
             <Code />
           </motion.button>
           <motion.button
-            className="btn btn-sm md:btn-md lg:btn-lg animate-pulse btn-primary absolute -top-3 md:top-2 lg:top-5 md:right-8 right-4 btn-circle flex items-center transition-transform duration-[5000ms] hover:scale-105"
+            className="btn btn-sm md:btn-md lg:btn-lg shadow-xl animate-pulse btn-primary absolute -top-3 md:top-2 lg:top-5 md:right-8 right-4 btn-circle flex items-center transition-transform duration-[5000ms] hover:scale-105"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.7 }}
