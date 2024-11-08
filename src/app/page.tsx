@@ -114,7 +114,7 @@ export default function Home() {
                 </div>
                 <ul
                   tabIndex={0}
-                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-28 p-2 shadow"
+                  className="menu menu-sm dropdown-content bg-slate-900 rounded-box z-[1] mt-3 w-28 p-2 shadow"
                 >
                   <li>
                     <a href="#home">Home</a>
@@ -199,11 +199,18 @@ export default function Home() {
               </div>
               <div className="relative">
                 <Image
-                  src="/avatar.png"
+                  src="/coporate_shirt_removebg.png"
                   alt="Hien The Phan"
                   width={500}
                   height={500}
-                  className="rounded-full relative z-10 right-4 md:right-10 p-4 md:p-8 border-t-2 border-dotted border-primary"
+                  className="rounded-full relative z-10 right-4 md:right-10 p-4 md:p-6 border-t-2 border-dashed border-purple-500"
+                />
+                <Image
+                  src="/avatar_thor.jpg"
+                  alt="Hien The Phan"
+                  width={500}
+                  height={500}
+                  className="rounded-full relative z-10 right-4 md:right-10 p-4 md:p-6 border-t-2 border-dashed border-purple-500"
                 />
               </div>
             </div>
