@@ -3,6 +3,7 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import DotPattern from "./DotPattern";
+import TypingEffect from "./TypingEffect";
 
 const About = () => {
   const ref = useRef(null);
@@ -21,7 +22,7 @@ const About = () => {
   return (
     <motion.div
       ref={ref}
-      className="mx-auto flex flex-col md:flex-row items-center justify-center bg-black text-white p-10 md:p-20 md:py-36 relative"
+      className="mx-auto flex flex-col lg:flex-row items-center justify-center bg-black text-white p-10 md:p-20 md:py-36 gap-4 relative"
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -32,10 +33,7 @@ const About = () => {
           <br />
           me
         </h2>
-        <motion.p
-          className="text-lg mb-8"
-          variants={childVariants}
-        >
+        <motion.p className="text-lg mb-8" variants={childVariants}>
           I&apos;m a passionate web developer with a knack for creating dynamic
           and responsive web applications. I specialize in using modern
           technologies like Next.js, React, and TypeScript to build
@@ -51,8 +49,11 @@ const About = () => {
           Contact me
         </motion.a>
       </motion.div>
-      <motion.div className="flex-1 relative mt-10 md:mt-0" variants={childVariants}>
-        <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden relative z-20">
+      <motion.div
+        className="flex relative mt-24 lg:mt-0 mx-auto"
+        variants={childVariants}
+      >
+        <div className="w-64 h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden relative z-20">
           <Image
             src="/coding2.jpg"
             alt="Coding setup"
@@ -60,11 +61,24 @@ const About = () => {
             objectFit="cover"
           />
         </div>
-        <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-cyan-400 to-purple-400 rounded-full opacity-50 blur-2xl animate-pulse z-10"></div>
+        <TypingEffect
+          texts={[
+            "  👨‍💻👨‍💻 I'm passionate about crafting systems",
+            "I  love Avenger so I want to become Coding Avenger 💪😁",
+          ]}
+          speed={100}
+          className="absolute z-30 -top-16 left-18 text-sm md:text-base lg:text-lg xl:text-xl ml-4"
+        />
+        <div className="w-64 h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden relative z-20 -left-16">
+          <Image
+            src="/avatar_thor.jpg"
+            alt="My Thor Avatar"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-cyan-400 to-purple-400 rounded-full opacity-50 blur-3xl animate-pulse z-10"></div>
       </motion.div>
-      <div className="absolute right-80 text-8xl text-purple-600 animate-bounce hidden md:block">
-        →
-      </div>
       <div className="absolute top-10 -left-10 bg-blue-500 w-96 h-96 blur-3xl opacity-20 rounded-full -z-0"></div>
       <div className="absolute right-72 w-40 h-40 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full opacity-50 blur-3xl animate-pulse "></div>
       <DotPattern />

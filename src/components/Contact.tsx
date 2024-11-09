@@ -93,7 +93,9 @@ const Contact: React.FC = () => {
               className="w-full px-6 py-4 bg-pink-400/10 rounded-3xl h-32 focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-300"
             ></textarea>
 
-            <span className="text-pink-500 ml-4 text-8xl absolute">←</span>
+            <span className="text-pink-500 ml-4 text-8xl hidden lg:inline-block md:absolute">
+              ←
+            </span>
           </div>
           <button
             type="submit"
@@ -104,12 +106,12 @@ const Contact: React.FC = () => {
         </form>
       </div>
 
-      <div className="absolute top-10 right-10  bg-purple-800 w-96 h-96 blur-3xl opacity-15 rounded-full z-10 hidden md:block"></div>
-      <div className="absolute top-10 left-10 bg-purple-800  w-96 h-96 blur-3xl opacity-15 rounded-full z-10 hidden md:block"></div>
-      <div className="absolute -top-0 left-60  hidden 2xl:block xl:hidden lg:hidden md:hidden sm:hidden z-10">
+      <div className="absolute top-10 right-10  bg-purple-800 w-96 h-96 blur-3xl opacity-15 rounded-full z-10 hidden lg:block"></div>
+      <div className="absolute top-10 left-10 bg-purple-800  w-96 h-96 blur-3xl opacity-15 rounded-full z-10 hidden lg:block"></div>
+      <div className="absolute -top-0 left-60  hidden 2xl:block  z-10">
         <ArcComponent width={400} height={400} />
       </div>
-      <div className="absolute -top-20 left-0 xl:block lg:hidden md:hidden sm:hidden z-10 ">
+      <div className="absolute -top-20 left-0 hidden 2xl:block  z-10 ">
         <ArcComponent width={800} height={800} />
       </div>
       <div className="flex items-center justify-center opacity-80 absolute right-40 top-60 hidden xl:block lg:hidden md:hidden sm:hidden">

@@ -17,6 +17,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 import ImageAndIcons from "@/components/ImageAndIcons";
+import TypingEffect from "@/components/TypingEffect";
 
 const socialLinks = [
   { href: "#discord", icon: <DiscordIcon /> },
@@ -185,6 +186,11 @@ export default function Home() {
               of Vietnam.
             </p>
           </motion.div>
+          <TypingEffect
+            texts={["Hii! Nice to meet you 👐", "I''m Hien, a software monkey-neer 🐒", "Leet's connect! 🍵"]}
+            speed={100}
+            className="absolute top-2 right-36 2xl:top-1/2 2xl:left-1/2 2xl:transform 2xl:-translate-x-2 lg:top-8 transform translate-x-10 text-lg lg:text-xl"
+          />
           <ImageAndIcons />
         </main>
         <div className="absolute right-8 top-1/3 transform -translate-y-1/3 flex flex-col gap-6 z-40 ">
