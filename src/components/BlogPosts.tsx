@@ -38,6 +38,10 @@ const BlogPosts: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
+                  <a
+                    href={`blog/${post.id}`}
+                    className="text-primary transition-colors duration-300 text-xl"
+                  >
                 <Image
                   src={`/${post.image}`}
                   alt={post.title}
@@ -49,13 +53,8 @@ const BlogPosts: React.FC = () => {
                   <div className="absolute inset-0 bg-blue-900/30 transition-all duration-500 transform origin-bottom scale-y-0 group-hover:scale-y-100 -z-10" />
                   <h3 className="text-2xl font mb-4">{post.title}</h3>
                   <p className="text-gray-400 mb-4">{post.description}</p>
-                  <a
-                    href={`blog/${post.id}`}
-                    className="text-purple-500 transition-colors duration-300 text-xl"
-                  >
-                    Read more &gt;&gt;
-                  </a>
                 </div>
+                  </a>
               </motion.div>
             ))}
         </div>

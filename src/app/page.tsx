@@ -18,6 +18,7 @@ import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 import ImageAndIcons from "@/components/ImageAndIcons";
 import TypingEffect from "@/components/TypingEffect";
+import Timeline from "@/components/Timeline";
 
 const socialLinks = [
   { href: "#discord", icon: <DiscordIcon /> },
@@ -216,7 +217,12 @@ export default function Home() {
         <Skills />
       </div>
       <div id="projects">
-        <Projects />
+        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+          <div className="z-10 max-w-6xl w-full items-center justify-between font-mono text-sm">
+            <Timeline />
+            <Projects />
+          </div>
+        </main>
       </div>
       <div id="blog-posts">
         <BlogPosts />
