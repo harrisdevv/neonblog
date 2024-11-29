@@ -3,7 +3,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Rocket, Building2, GraduationCap } from "lucide-react";
 
-const TimelineItem = ({ date, title, content, isLeft = true, icon: Icon }) => {
+interface TimelineItemProps {
+  date: string;
+  title: string;
+  content: React.ReactNode;
+  isLeft?: boolean;
+  Icon: React.ElementType;
+}
+
+const TimelineItem = ({ date, title, content, isLeft = true, Icon }: TimelineItemProps) => {
   const slideDirection = isLeft ? -50 : 50;
   
   return (
@@ -58,7 +66,8 @@ const Timeline = () => {
             <TimelineItem 
               date="2014 - 2018"
               title="Bachelor of Computer Science"
-              icon={GraduationCap}
+              Icon={GraduationCap}
+              isLeft={true}
               content={
                 <div className="text-base-content/80">
                   <p className="font-semibold">Ho Chi Minh City University of Technology (HCMUT)</p>
@@ -72,7 +81,7 @@ const Timeline = () => {
             <TimelineItem 
               date="2018 - 2021"
               title="Software Engineer at Zalo"
-              icon={Building2}
+              Icon={Building2}
               isLeft={false}
               content={
                 <ul className="space-y-2 text-base-content/80">
@@ -87,7 +96,8 @@ const Timeline = () => {
             <TimelineItem 
               date="2021 - Present"
               title="Freelance Software Engineer"
-              icon={Rocket}
+              Icon={Rocket}
+              isLeft={true}
               content={
                 <div className="text-base-content/80">
                   <p className="mb-4 italic text-accent/80">

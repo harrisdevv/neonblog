@@ -146,7 +146,7 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-primary/70 hover:text-primary transition-colors mt-4"
             >
-              <GithubIcon />
+              <GithubIcon className="w-5 h-5" />
               <span>View on GitHub</span>
             </a>
           )}
