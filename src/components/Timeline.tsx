@@ -25,12 +25,12 @@ const TimelineItem = ({ date, title, content, isLeft = true, Icon }: TimelineIte
       <div className={`w-full flex ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
         <div className={`w-1/2 ${isLeft ? 'pr-8 text-left' : 'pl-8 text-left'}`}>
           <time className="text-sm font-mono text-accent">{date}</time>
-          <div className="bg-base-200/50 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-accent/20 hover:border-accent/40 mt-2">
+          <div className="bg-neutral/40 backdrop-blur-md p-6 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.24)] border-[1px] border-white/[0.05] hover:border-accent/20 transition-all duration-300 mt-2">
             <div className="flex items-center gap-2 mb-3">
               <Icon className="w-5 h-5 text-accent" />
-              <h3 className="text-xl font-bold text-accent">{title}</h3>
+              <h3 className="text-xl font-bold text-accent/90 group-hover:text-accent">{title}</h3>
             </div>
-            {content}
+            <div className="text-neutral-content/90">{content}</div>
           </div>
         </div>
         
@@ -69,7 +69,7 @@ const Timeline = () => {
               Icon={GraduationCap}
               isLeft={true}
               content={
-                <div className="text-base-content/80">
+                <div className="text-neutral-content/90">
                   <p className="font-semibold">Ho Chi Minh City University of Technology (HCMUT)</p>
                   <ul className="space-y-2 mt-2">
                     <li>• Major in Software Engineering</li>
@@ -84,7 +84,7 @@ const Timeline = () => {
               Icon={Building2}
               isLeft={false}
               content={
-                <ul className="space-y-2 text-base-content/80">
+                <ul className="space-y-2 text-neutral-content/90">
                   <li>• Develop core feature in java of multi service architecture, Thrift RPC, connection pooling </li>
                   <li>• Develop service admin to monitor services health, metrics, and logs using javascript, template manager, html, css, chart</li>
                   <li>• Worked with microservices architecture and real-time communication</li>
@@ -99,7 +99,7 @@ const Timeline = () => {
               Icon={Rocket}
               isLeft={true}
               content={
-                <div className="text-base-content/80">
+                <div className="text-neutral-content/90">
                   <p className="mb-4 italic text-accent/80">
                     &ldquo;Embracing the challenge of independent development, stepping out of the corporate environment to push my boundaries and take full ownership of projects.&rdquo;
                   </p>

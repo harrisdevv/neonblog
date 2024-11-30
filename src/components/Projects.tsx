@@ -3,7 +3,8 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
-import { GithubIcon } from "lucide-react";
+import { GithubIcon, Server, Database, Braces, Layers } from "lucide-react";
+import { Icon } from '@iconify/react';
 
 interface Project {
   name: string;
@@ -13,7 +14,29 @@ interface Project {
   videos?: Array<{ src: string }>;
   github?: string;
   style: string;
+  techStack: {
+    frontend?: string[];
+    backend?: string[];
+    database?: string[];
+    other?: string[];
+  };
 }
+
+// Tech stack icon mappings
+const techStackIcons: { [key: string]: string } = {
+  nextjs: 'logos:nextjs-icon',
+  typescript: 'logos:typescript-icon',
+  tailwindcss: 'logos:tailwindcss-icon',
+  'shadcn-ui': 'logos:radix-ui',
+  openai: 'ri:openai-fill',
+  postgresql: 'logos:postgresql',
+  prisma: 'logos:prisma',
+  docker: 'logos:docker-icon',
+  vercel: 'logos:vercel-icon',
+  aws: 'skill-icons:aws-light',
+  react: 'logos:react',
+  convex: '',
+};
 
 const Projects = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; title: string } | null>(null);
@@ -45,6 +68,12 @@ const Projects = () => {
       videos: [{ src: "/AI-Goal-Master.mp4" }],
       github: "https://github.com/harrisdevv/template_postgres",
       style: "big",
+      techStack: {
+        frontend: ['nextjs', 'tailwindcss', 'typescript', 'shadcn-ui'],
+        backend: ['nextjs', 'openai'],
+        database: ['postgresql', 'prisma'],
+        other: ['docker', 'vercel', 'aws']
+      }
     },
     {
       name: "🚀 GrowTrack - Saas Project",
@@ -53,10 +82,7 @@ const Projects = () => {
         "🌟 Get your goals on track! With GrowTrack, you can set your personal goals and let our AI generate tasks to help you achieve them within a specific date range. \n✅ Track your progress by ticking off tasks as you complete them, and ask our AI for tips to make your tasks easier! \n📊 On another page, you can see metrics for each of your goals and tasks, making it fun and engaging to reach your dreams!",
       images: [
         { src: "/growtrack_dashboard.png", title: "Goal Dashboard" },
-        {
-          src: "/growtrack_message_motivation.png",
-          title: "AI Motivation Message",
-        },
+        { src: "/growtrack_message_motivation.png", title: "AI Motivation Message" },
         { src: "/gt_ai.png", title: "AI Features" },
         { src: "/gt_streak.png", title: "Streak Tracker" },
         { src: "/gt_darktheme.png", title: "Dark Theme" },
@@ -64,6 +90,12 @@ const Projects = () => {
       videos: [],
       github: "https://github.com/harrisdevv/PeakFlow",
       style: "big",
+      techStack: {
+        frontend: ['react', 'tailwindcss', 'typescript'],
+        backend: ['nextjs', 'openai'],
+        database: ['convex'],
+        other: ['docker']
+      }
     },
     {
       name: "AI-powered Scheduling 📆 - Saas Project",
@@ -77,6 +109,12 @@ const Projects = () => {
       videos: [{ src: "/AI-powered Scheduling.mp4" }],
       github: "https://github.com/harrisdevv/PeakFlow",
       style: "big",
+      techStack: {
+        frontend: ['react', 'tailwindcss'],
+        backend: ['nextjs', 'openai'],
+        database: ['convex'],
+        other: ['aws']
+      }
     },
   ];
 
@@ -140,15 +178,112 @@ const Projects = () => {
           <p className="text-xl mt-4 text-gray-400">{project.date}</p>
           <p className="text-lg mt-4 whitespace-pre-line text-left">{project.description}</p>
           {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-primary/70 hover:text-primary transition-colors mt-4"
-            >
-              <GithubIcon className="w-5 h-5" />
-              <span>View on GitHub</span>
-            </a>
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent mt-2 hover:text-accent/80 transition-colors"
+                >
+                <GithubIcon className="w-5 h-5 inline mr-2" />
+                  View on GitHub
+                </a>
+              </div>
+              <div className="space-y-3 bg-neutral/20 backdrop-blur-sm p-4 rounded-lg">
+                {project.techStack.frontend && (
+                  <div className="flex items-center gap-3">
+                    <Braces className="w-5 h-5 text-accent" />
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.frontend.map((tech) => (
+                        <div key={tech} className="flex items-center gap-2 bg-neutral/30 px-3 py-2 rounded-md">
+                          {techStackIcons[tech] ? (
+                            <>
+                              <Icon 
+                                icon={techStackIcons[tech]} 
+                                className="w-7 h-7 min-w-[28px] text-white" 
+                              />
+                              <span className="text-sm text-neutral-content/70">{tech}</span>
+                            </>
+                          ) : (
+                            <span className="text-sm text-neutral-content/70">{tech}</span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {project.techStack.backend && (
+                  <div className="flex items-center gap-3">
+                    <Server className="w-5 h-5 text-accent" />
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.backend.map((tech) => (
+                        <div key={tech} className="flex items-center gap-2 bg-neutral/30 px-3 py-2 rounded-md">
+                          {techStackIcons[tech] ? (
+                            <>
+                              <Icon 
+                                icon={techStackIcons[tech]} 
+                                className="w-7 h-7 min-w-[28px] text-white" 
+                              />
+                              <span className="text-sm text-neutral-content/70">{tech}</span>
+                            </>
+                          ) : (
+                            <span className="text-sm text-neutral-content/70">{tech}</span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {project.techStack.database && (
+                  <div className="flex items-center gap-3">
+                    <Database className="w-5 h-5 text-accent" />
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.database.map((tech) => (
+                        <div key={tech} className="flex items-center gap-2 bg-neutral/30 px-3 py-2 rounded-md">
+                          {techStackIcons[tech] ? (
+                            <>
+                              <Icon 
+                                icon={techStackIcons[tech]} 
+                                className="w-7 h-7 min-w-[28px] text-white" 
+                              />
+                              <span className="text-sm text-neutral-content/70">{tech}</span>
+                            </>
+                          ) : (
+                            <span className="text-sm text-neutral-content/70">{tech}</span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {project.techStack.other && (
+                  <div className="flex items-center gap-3">
+                    <Layers className="w-5 h-5 text-accent" />
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.other.map((tech) => (
+                        <div key={tech} className="flex items-center gap-2 bg-neutral/30 px-3 py-2 rounded-md">
+                          {techStackIcons[tech] ? (
+                            <>
+                              <Icon 
+                                icon={techStackIcons[tech]} 
+                                className="w-7 h-7 min-w-[28px] text-white" 
+                              />
+                              <span className="text-sm text-neutral-content/70">{tech}</span>
+                            </>
+                          ) : (
+                            <span className="text-sm text-neutral-content/70">{tech}</span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
           )}
         </motion.div>
 

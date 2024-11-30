@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     "Discover innovative insights and tutorials on web development by Hien Phan. Join us to elevate your coding skills and explore the latest trends and technologies in the web development sphere.",
   keywords:
     "web development, coding tutorials, Hien Phan, innovative insights, programming, frontend development, backend development, JavaScript, React, Next.js",
-  authors: [{ name: "Hien Phan", url: "https://yourwebsite.com" }],
+  authors: [{ name: "Hien Phan", url: "https://hienspace.vercel.app" }],
   openGraph: {
     title: "HienSpace | Unleashing Creativity Through Code",
     description:
       "Join Hien Phan on a journey through web development with insightful tutorials and resources.",
-    url: "https://yourwebsite.com", // Replace with your actual site URL
+    url: "https://hienspace.vercel.app", // Replace with your actual site URL
     images: "/programmer.png",
     type: "website",
   },
